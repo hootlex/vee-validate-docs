@@ -1,0 +1,30 @@
+{
+    "rules": [
+        "after",
+        "alpha_dash",
+        "alpha_num",
+        "alpha",
+        "before",
+        "between",
+        "confirmed",
+        "date_between",
+        "date_format",
+        "decimal",
+        "digits",
+        "dimensions",
+        "email",
+        "ext",
+        "image",
+        "in",
+        "ip",
+        "max",
+        "mimes",
+        "min",
+        "not_in",
+        "numeric",
+        "regex",
+        "required",
+        "size",
+        "url"
+    ]
+}
