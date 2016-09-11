@@ -84,7 +84,7 @@
             </code-block>
             <div class="note">
                 <b>Note:</b> Each validator keeps track of its own locale. so be sure to update any instances whenever the language changes.
-                For more information about how to overwrite messages and add new ones, please refer to the <router-link to="/rules#custom-messages" class="link">custom messages</router-link> section.
+                For more information about how to overwrite messages and add new ones, please refer to the <router-link :to="{ name: 'rules', hash: 'custom-messages' }" class="link">custom messages</router-link> section.
             </div>
             The Validator class has a static method called <code class="inline">setDefaultLocale(string)</code> which sets the default language for all newly instantiated validators to that language.
             <code-block class="language-javascript">

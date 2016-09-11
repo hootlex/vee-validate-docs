@@ -58,11 +58,11 @@
             To combine both rules we assign the value <code class="inline">required|email</code> to the <code class="inline">data-rules</code> data-set attribute.
         </p>
         <basic-example></basic-example>
-        <div class="flex-center"><router-link class="link" to="/examples">More Examples</router-link></div>
+        <div class="flex-center"><router-link class="link" :to="{ name: 'examples' }">More Examples</router-link></div>
         <br>
         <div class="note">
             <b>Note:</b> The field name that appears in the error messages is usually the input's <code>name</code> attribute, unless you passed a value from the vue instance <code>$data</code> object,
-            The name will be then the expression name, check the <router-link to="/examples#validate-data-example">data validation example</router-link>.
+            The name will be then the expression name, check the <router-link :to="{ name: 'examples', hash: '#validate-data-example' }">data validation example</router-link>.
         </div>
         <h2 id="render-errors" class="content-subhead"><a href="#render-errors">Rendering Errors</a></h2>
         <p>
@@ -76,18 +76,18 @@
                 <li><code class="inline">all()</code> Gets all error messages.</li>
                 <li><code class="inline">any()</code> Checks if there are any errors.</li>
             </ul>
-            There are a few more <router-link class="link" to="/api#error-bag">methods</router-link> that you can use to manipulate the errors object.
+            There are a few more <router-link class="link" :to="{ name: 'api', hash: '#error-bag'}">methods</router-link> that you can use to manipulate the errors object.
         </p>
         <h2 id="available-rules" class="content-subhead"><a href="#available-rules">Available Rules</a></h2>
         <p>There are more than 20 rules available to validate your inputs:</p>
         <div class="pure-g">
             <div v-for="group in rules" :class="'pure-u-1-' + rules.length">
                 <ul>
-                    <li v-for="rule in group"><router-link class="link" :to="'/rules#rule-' + rule">{{ rule }}</router-link></li>
+                    <li v-for="rule in group"><router-link class="link" :to="{ name: 'rules', hash: '#rule-' + rule }">{{ rule }}</router-link></li>
                 </ul>
             </div>
         </div>
-        <p>Visit the <router-link class="link" to="/rules#available-rules">rules documentation</router-link> to learn more about how to use each rule, and how to <router-link to="/rules#custom-rules" class="link">create your own</router-link>.</p>
+        <p>Visit the <router-link class="link" :to="{ name: 'rules', hash: '#available-rules' }">rules documentation</router-link> to learn more about how to use each rule, and how to <router-link :to="{ name: 'rules', hash: '#custom-rules' }" class="link">create your own</router-link>.</p>
         <h2 id="configuration" class="content-subhead"><a href="#configuration">Configuration</a></h2>
         <p>
             You may need to configure some options to tweak some of the plugin internals, this is not required, but could cause conflicts. For example: if you are using a property called <code class="inline">errors</code> on your vue instance this may cause conflicts.
@@ -111,7 +111,7 @@
             <li><code class="inline">errorBagName:</code> The name of the ErrorBag object that will be injected in each of Vue's instances' data.</li>
             <li><code class="inline">delay:</code> The default debounce time for all inputs (only affects validations).</li>
             <li><code class="inline">locale:</code> The default language for the validation messages.</li>
-            <li><code class="inline">messages:</code> The messages to be generated for the validation errors, check <router-link class="link" to="/rules#custom-messages">custom messages</router-link> section.</li>
+            <li><code class="inline">messages:</code> The messages to be generated for the validation errors, check <router-link class="link" :to="{ name: 'rules', hash: '#custom-messages' }">custom messages</router-link> section.</li>
             <li><code class="inline">strict:</code> Fields that have no rules will fail validation unless <code class="inline">strict</code> is set to false.</li>
         </ul>
     </div>

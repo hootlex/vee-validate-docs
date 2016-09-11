@@ -5,7 +5,7 @@
             This plugin only comes with English messages to keep things small, but it was built with flexible message generation in mind.
             <br>
             The <a href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/en.js" class="link" target="github">English messages file</a> is an example on how you would structure those messages.
-            Then you may want to update the validator dictionary, which should happen once in your app startup. still you may update them whenever you want in any point of your app, review the <router-link to="/rules#custom-messages" class="link">custom messages</router-link> here.
+            Then you may want to update the validator dictionary, which should happen once in your app startup. still you may update them whenever you want in any point of your app, review the <router-link :to="{ name: 'rules', hash: '#custom-messages' }" class="link">custom messages</router-link> here.
         </p>
         <h2 id="attributes-data-as" class="content-subhead"><a href="#attributes-data-as">Attributes (data-as)</a></h2>
         <p>
@@ -67,7 +67,7 @@
             </div>
         </p>
         <div>
-            A working example can be found <router-link class="link" to="/examples#locale-example">here</router-link>.
+            A working example can be found <router-link class="link" :to="{ name: 'examples', hash: '#locale-example' }">here</router-link>.
         </div>
         <h2 id="localized-files" class="content-subhead"><a href="#localized-files">Localized Files</a></h2>
         <p>

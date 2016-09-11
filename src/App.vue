@@ -8,34 +8,34 @@
 
         <div id="menu" ref="menu">
             <div class="pure-menu">
-                <router-link to="/" class="pure-menu-heading">Vee Validate</router-link>
+                <router-link :to="{ name: 'home' }" class="pure-menu-heading">Vee Validate</router-link>
                 <ul class="pure-menu-list">
                     <li class="pure-menu-item">
-                        <router-link to="/" class="pure-menu-link">Getting Started</router-link>
+                        <router-link :to="{ name: 'home' }" class="pure-menu-link">Getting Started</router-link>
                     </li>
                     <li class="pure-menu-item">
-                        <router-link to="/#installation" class="pure-menu-link">Installation</router-link>
+                        <router-link :to="{ name: 'home', hash: '#installation' }" class="pure-menu-link">Installation</router-link>
                     </li>
                     <li class="pure-menu-item">
-                        <router-link to="/#basic-example" class="pure-menu-link">Basic Example</router-link>
+                        <router-link :to="{ name: 'home', hash: '#basic-example' }" class="pure-menu-link">Basic Example</router-link>
                     </li>
                     <li class="pure-menu-item">
-                        <router-link to="/#render-errors" class="pure-menu-link">Rendering Errors</router-link>
+                        <router-link :to="{ name: 'home', hash: '#render-errors' }" class="pure-menu-link">Rendering Errors</router-link>
                     </li>
                     <li class="pure-menu-item">
-                        <router-link to="/examples" class="pure-menu-link">Examples</router-link>
+                        <router-link :to="{ name: 'examples' }" class="pure-menu-link">Examples</router-link>
                     </li>
                     <li class="pure-menu-item">
-                        <router-link to="/rules" class="pure-menu-link">Validation Rules</router-link>
+                        <router-link :to="{ name: 'rules' }" class="pure-menu-link">Validation Rules</router-link>
                     </li>
                     <li class="pure-menu-item">
-                        <router-link to="/localization" class="pure-menu-link">Localization</router-link>
+                        <router-link :to="{ name: 'localization' }" class="pure-menu-link">Localization</router-link>
                     </li>
                     <li class="pure-menu-item">
-                        <router-link to="/api" class="pure-menu-link">API Reference</router-link>
+                        <router-link :to="{ name: 'api' }" class="pure-menu-link">API Reference</router-link>
                     </li>
                     <li class="pure-menu-item">
-                        <router-link to="/#configuration" class="pure-menu-link">Configuration</router-link>
+                        <router-link :to="{ name: 'home', hash: '#configuration' }" class="pure-menu-link">Configuration</router-link>
                     </li>
                 </ul>
             </div>

@@ -23,7 +23,7 @@
         <div class="pure-g">
             <div v-for="group in rules" :class="'pure-u-1-' + rules.length">
                 <ul>
-                    <li v-for="rule in group"><router-link class="link" :to="'/rules#rule-' + rule">{{ rule }}</router-link></li>
+                    <li v-for="rule in group"><router-link class="link" :to="{ name: 'rules', hash: '#rule-' + rule }">{{ rule }}</router-link></li>
                 </ul>
             </div>
         </div>
@@ -563,7 +563,7 @@
                 validator.setLocale('ar'); // now this validator will generate messages in arabic.
             </code-block>
             <p>
-                Usually you would stucture your language files for your app rather than adding hardcoded strings like the example above, check the <router-link class="link" to="/localization">localization guide</router-link> for a better approach.
+                Usually you would stucture your language files for your app rather than adding hardcoded strings like the example above, check the <router-link class="link" :to="{ name: 'localization' }">localization guide</router-link> for a better approach.
             </p>
             <div class="note">
                 <b>Note:</b> You must provide the messages in an object path like: <code>dictionary.locale.message</code>.
@@ -593,7 +593,7 @@
             </code-block>
 
             <div class="note">
-                <b>Note: </b> If the attribute is not found for the current locale, it will fallback to the binding expression or the field name. If you use the <router-link to="/localization#attributes-data-as">data-as</router-link> attribute it will take precedence over the internal dictionary.
+                <b>Note: </b> If the attribute is not found for the current locale, it will fallback to the binding expression or the field name. If you use the <router-link :to="{ name: 'localization', hash: '#attributes-data-as' }">data-as</router-link> attribute it will take precedence over the internal dictionary.
             </div>
         </p>
     </div>
