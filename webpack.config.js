@@ -13,7 +13,7 @@ let config = {
     output: {
         path: path.join(__dirname, 'docs/assets'),
         filename: '[name].js',
-        publicPath: '/assets/'
+        publicPath: isProduction ? '/vee-validate-docs/' : '/assets/'
     },
     devServer: {
         contentBase: 'docs',
