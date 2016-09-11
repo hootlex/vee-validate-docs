@@ -602,11 +602,12 @@
 
 <script>
 import data from './../data.json';
+import Collection from 'collectionsjs';
 
 export default {
     data() {
         return {
-            rules: data.rules
+            rules: new Collection(data.rules).chunk(10).all()
         }
     }
 }

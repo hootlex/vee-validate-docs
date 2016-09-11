@@ -8,7 +8,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 let config = {
     entry: {
         bundle: path.join(__dirname, 'src', 'main'),
-        vendor: ['vue', 'vue-router', 'moment', 'vee-validate']
+        vendor: ['vue', 'vue-router', 'moment', 'vee-validate', 'collectionsjs']
     },
     output: {
         path: path.join(__dirname, 'docs/assets'),
