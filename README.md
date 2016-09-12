@@ -8,28 +8,27 @@ The site is accessible via http://vee-validate.logaretm.com/
 
 I will happily accept any contribution with fixes, formatting, or styling. You can also add or request specific examples and I will happily oblige when I have free time.
 
-Clone the repo
-
+**Clone the repository:**
 ```
 git clone https://github.com/logaretm/vee-validate-docs.git
 ```
 
-Install dependencies
-
+**Install dependencies:**
 ```
 npm install
 ```
 
-Build And test locally:
-
-#### Build
+**Build and test locally:**
 ```
 npm run build
 ```
 
-Build for production:
+**Webpack Dev with HMR:**
+```
+npm run dev
+```
 
-### Build for Production
+**Build for production:**
 ```
 npm run prod
 ```
