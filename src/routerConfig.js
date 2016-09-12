@@ -30,11 +30,7 @@ export default {
         { path: '/rules', name: 'rules', component: Rules, meta: { subtitle: 'Validation Rules', scrollToTop: true } },
         { path: '/localization', name: 'localization', component: Localization, meta: { subtitle: 'Language Support', scrollToTop: true } },
 
-        { path: '/index.html', redirect: '/' },
-        { path: '/api.html', redirect: '/api' },
-        { path: '/examples.html', redirect: '/examples' },
-        { path: '/rules.html', redirect: '/rules' },
-        { path: '/localization.html', redirect: '/localization' },
+        { path: '/:page.html', redirect: '/:page' }, // handles .html references.
         { path: '*', redirect: '/' },
     ]
 };
