@@ -25,12 +25,16 @@ export default {
     scrollBehavior,
     routes: [
         { path: '/', name: 'home', component: Home, meta: { subtitle: 'Simple Vue.js Form Validation', scrollToTop: true } },
-        { path: 'api', name: 'api', component: Api, meta: { subtitle: 'Classes API', scrollToTop: true } },
-        { path: 'examples', name: 'examples', component: Examples, meta: { subtitle: 'Usage and Examples', scrollToTop: true } },
-        { path: 'rules', name: 'rules', component: Rules, meta: { subtitle: 'Validation Rules', scrollToTop: true } },
-        { path: 'localization', name: 'localization', component: Localization, meta: { subtitle: 'Language Support', scrollToTop: true } },
+        { path: '/api', name: 'api', component: Api, meta: { subtitle: 'Classes API', scrollToTop: true } },
+        { path: '/examples', name: 'examples', component: Examples, meta: { subtitle: 'Usage and Examples', scrollToTop: true } },
+        { path: '/rules', name: 'rules', component: Rules, meta: { subtitle: 'Validation Rules', scrollToTop: true } },
+        { path: '/localization', name: 'localization', component: Localization, meta: { subtitle: 'Language Support', scrollToTop: true } },
 
-
-        { path: '*', redirect: '/' }
+        { path: '/index.html', redirect: '/' },
+        { path: '/api.html', redirect: '/api' },
+        { path: '/examples.html', redirect: '/examples' },
+        { path: '/rules.html', redirect: '/rules' },
+        { path: '/localization.html', redirect: '/localization' },
+        { path: '*', redirect: '/' },
     ]
 };
