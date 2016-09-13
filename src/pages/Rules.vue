@@ -162,7 +162,7 @@
                 </div>
                 <div>
                     <form class="pure-form pure-form-stacked">
-                        <input v-validate data-rules="date_format:DD/MM/YYYY|between:10/09/2016,20/09/2016" name="date_between_field" data-as="field" :class="{'pure-input-1': true, 'has-error': errors.has('date_between_field') }" type="text" placeholder="DD/MM/YYYY betweem 10/09/2016 and 20/09/2016">
+                        <input v-validate data-rules="date_format:DD/MM/YYYY|date_between:10/09/2016,20/09/2016" name="date_between_field" data-as="field" :class="{'pure-input-1': true, 'has-error': errors.has('date_between_field') }" type="text" placeholder="DD/MM/YYYY betweem 10/09/2016 and 20/09/2016">
                         <span class="error" v-show="errors.has('date_between_field')">{{ errors.first('date_between_field') }}</span>
                     </form>
                 </div>
