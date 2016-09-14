@@ -31,7 +31,7 @@
             <code-block class="language-bash">bower install vee-validate#2.0.0-beta.10 --save</code-block>
             <br>
             <h3 id="cdn" class="content-subhead"><a href="#cdn">CDN</a></h3>
-            Head over to <a href="https://www.jsdelivr.com/?query=vee-validate" target="jsdelivr">jsdelivr</a> and grab the latest version.
+            Head over to <a href="https://www.jsdelivr.com/projects/vee-validate" target="jsdelivr">jsdelivr</a> and grab the latest version.
 
             Then you may use it like this:
             <code-block class="language-html">
