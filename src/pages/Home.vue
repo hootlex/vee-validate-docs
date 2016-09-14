@@ -15,7 +15,7 @@
         </p>
         <h2 id="installation" class="content-subhead"><a href="#installation">Installation</a></h2>
         <p>
-            You can install this plugin via <a class="link" href="#npm">npm</a> or <a class="link" href="#bower">bower</a>.
+            You can install this plugin via <a class="link" href="#npm">npm</a> or <a class="link" href="#bower">bower</a> or via a <a class="link" href="#cdn">CDN</a>.
             <h3 id="npm" class="content-subhead"><a href="#npm">npm</a></h3>
             <b>Vue 1.x</b>
             <code-block class="language-bash">npm install vee-validate --save</code-block>
@@ -30,6 +30,8 @@
             <b>Vue 2.x</b>
             <code-block class="language-bash">bower install vee-validate#2.0.0-beta.10 --save</code-block>
             <br>
+            <h3 id="cdn" class="content-subhead"><a href="#cdn">CDN</a></h3>
+            Head over to <a href="https://www.jsdelivr.com/?query=vee-validate" target="jsdelivr">jsdelivr</a> and grab the latest version.
 
             Then you may use it like this:
             <code-block class="language-html">
