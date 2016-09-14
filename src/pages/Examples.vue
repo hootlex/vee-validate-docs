@@ -68,6 +68,19 @@
             For convienece you may add the <code class="inline">data-scope</code> on the form that owns the inputs, you don't have to add the attribute on each and every input.
          </p>
          <scope-example></scope-example>
+         <h2 id="coupon-example" class="content-subhead"><a href="#coupon-example">Custom Rule: Coupon</a></h2>
+         <p>
+            Let's say you want to validate something specific to your app domain that isn't provided by the default validators,
+            for example lets validate a user coupon on checkout. If it is a valid coupon then you discount it for him, if not he pays the full price :(
+            <br>
+
+            Here is a list of our valid coupons: <code class="inline">SUMMER2016</code>, <code class="inline">WINTER2016</code> and <code class="inline">FALL2016</code>. each of which gives 20% off.
+
+            The process of validation is as follows: we take the input and send it to backend, the response should determine if the coupon is valid which is up to you. here I'm simulating async behavior using <code class="inline">setTimeout</code>.
+
+            <code class="inline">Vee-Validate</code> allows the usage of async validators, but it requires them to return a promise that resolves with an object containing the property <code class="inline">valid</code> which should equal a boolean state of the validation status.
+         </p>
+         <coupon-example></coupon-example>
     </div>
 </template>
 
@@ -78,6 +91,7 @@ import RejectExample from './../components/examples/RejectExample.vue';
 import ScopeExample from './../components/examples/ScopeExample.vue';
 import DataExample from './../components/examples/DataExample.vue';
 import EventExample from './../components/examples/EventExample.vue';
+import CouponExample from './../components/examples/CouponExample.vue';
 
 export default {
     components: {
@@ -86,7 +100,8 @@ export default {
         RejectExample,
         ScopeExample,
         DataExample,
-        EventExample
+        EventExample,
+        CouponExample
     }
 }
 </script>
