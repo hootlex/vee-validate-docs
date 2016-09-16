@@ -92,7 +92,8 @@ let config = {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             filename: 'vendor.js'
-        })
+        }),
+        new webpack.optimize.MinChunkSizePlugin({ minChunkSize: 51200 })
     ]
 };
 
