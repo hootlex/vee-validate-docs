@@ -82,6 +82,7 @@
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/pt_BR.js" target="github">Brazilian Portuguese</a> by <a class="link" href="https://github.com/edbizarro" target="github">@edbizarro</a></li>
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/fi.js" target="github">Finnish</a> by <a class="link" href="https://github.com/anttisand" target="github">@anttisand</a></li>
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/de.js" target="github">German</a> by <a class="link" href="https://github.com/kayschima" target="github">@kayschima</a></li>
+            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/fr.js" target="github">French</a> by <a class="link" href="https://github.com/thierrymichel" target="github">@thierrymichel</a></li>
         </ul>
     </div>
 </template>
