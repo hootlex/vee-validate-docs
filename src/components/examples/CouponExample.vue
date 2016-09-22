@@ -39,7 +39,7 @@
             import VeeValidate from 'vee-validate';
 
             Vue.use(VeeValidate);
-            
+
             new Vue ({
                 el: '#app',
                 data() {
@@ -113,41 +113,13 @@ export default {
     },
     methods: {
         applyCoupon() {
-            // Notice that it returns a promise instead of a boolean because
-            // there is at least one rule that returns a promise.
-            // all the result of all validations ran will be ANDed in the result param.
-            // true => All Pass
-            // false => At least one failed
             this.$validator.validate('coupon', this.coupon).then(result => {
                 this.discounted = result;
             });
+        },
+        created() {
+            this.$validator.attach('coupon', 'verify_coupon');
         }
-    },
-    created() {
-        // Make sure you extend before any validation occurs
-        // to avoid validating using non-existant rules.
-        this.$validator.extend('verify_coupon', {
-            getMessage: (field) => `The ${field} is not a valid coupon.`,
-            // If you want to return a promise you will have to make sure it always resolves
-            // to an object containing a 'valid' property which is a boolean state of the validation.
-            validate: (value) => new Promise(resolve => {
-                const validCoupons = [
-                    'SUMMER2016',
-                    'WINTER2016',
-                    'FALL2016'
-                    // I don't like spring :(
-                ];
-
-                // Simulate getting data from slow backend api.
-                setTimeout(() => {
-                    resolve({
-                        valid: !! ~validCoupons.indexOf(value.toUpperCase())
-                    });
-                }, 500);
-            })
-        });
-
-        this.$validator.attach('coupon', 'verify_coupon');
     }
 }
 </script>
