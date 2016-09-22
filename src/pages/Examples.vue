@@ -81,6 +81,14 @@
             <code class="inline">Vee-Validate</code> allows the usage of async validators, but it requires them to return a promise that resolves with an object containing the property <code class="inline">valid</code> which should equal a boolean state of the validation status.
          </p>
          <coupon-example></coupon-example>
+         <h2 id="radio-buttons-example" class="content-subhead"><a href="#radio-buttons-example">Radio Buttons</a></h2>
+         <p>
+            vee-validate also supports validating radio buttons, you can use whatever rules you want on them but only few rules makes sense, like <code class="inline">required</code>.
+            One thing to note in this example is that you only need to use the directive on one of the radio buttons, you don't need to attach it on every one, they all have to share the same name though.
+            <br><br>
+            In the following example, the third value is not included using the rule <code class="inline">in:1,2</code>
+         </p>
+         <radio-buttons-example></radio-buttons-example>
     </div>
 </template>
 
@@ -92,6 +100,7 @@ import ScopeExample from './../components/examples/ScopeExample.vue';
 import DataExample from './../components/examples/DataExample.vue';
 import EventExample from './../components/examples/EventExample.vue';
 import CouponExample from './../components/examples/CouponExample.vue';
+import RadioButtonsExample from './../components/examples/RadioButtonsExample.vue';
 
 export default {
     components: {
@@ -101,7 +110,8 @@ export default {
         ScopeExample,
         DataExample,
         EventExample,
-        CouponExample
+        CouponExample,
+        RadioButtonsExample
     }
 }
 </script>
