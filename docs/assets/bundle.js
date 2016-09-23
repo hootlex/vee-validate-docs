@@ -2111,9 +2111,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4", __vue_options__)
+    hotAPI.createRecord("data-v-3", __vue_options__)
   } else {
-    hotAPI.reload("data-v-4", __vue_options__)
+    hotAPI.reload("data-v-3", __vue_options__)
   }
 })()}
 if (__vue_options__.functional) {console.error("[vue-loader] App.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -2129,53 +2129,10 @@ module.exports = __vue_exports__
 var __vue_exports__, __vue_options__
 
 /* styles */
-__webpack_require__(121)
-
-/* script */
-__vue_exports__ = __webpack_require__(118)
-
-/* template */
-var __vue_template__ = __webpack_require__(128)
-__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-if (typeof __vue_exports__.default === "object") {
-if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-__vue_options__ = __vue_exports__ = __vue_exports__.default
-}
-if (typeof __vue_options__ === "function") {
-  __vue_options__ = __vue_options__.options
-}
-__vue_options__.render = __vue_template__.render
-__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7", __vue_options__)
-  } else {
-    hotAPI.reload("data-v-7", __vue_options__)
-  }
-})()}
-if (__vue_options__.functional) {console.error("[vue-loader] CodeBlock.vue: functional components are not supported and should be defined in plain js files using render functions.")}
-
-module.exports = __vue_exports__
-
-
-/***/ },
-
-/***/ 116:
-/***/ function(module, exports, __webpack_require__) {
-
-var __vue_exports__, __vue_options__
-
-/* styles */
 __webpack_require__(120)
 
 /* script */
-__vue_exports__ = __webpack_require__(119)
+__vue_exports__ = __webpack_require__(118)
 
 /* template */
 var __vue_template__ = __webpack_require__(126)
@@ -2197,9 +2154,52 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1", __vue_options__)
+    hotAPI.createRecord("data-v-2", __vue_options__)
   } else {
-    hotAPI.reload("data-v-1", __vue_options__)
+    hotAPI.reload("data-v-2", __vue_options__)
+  }
+})()}
+if (__vue_options__.functional) {console.error("[vue-loader] CodeBlock.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+module.exports = __vue_exports__
+
+
+/***/ },
+
+/***/ 116:
+/***/ function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+
+/* styles */
+__webpack_require__(121)
+
+/* script */
+__vue_exports__ = __webpack_require__(119)
+
+/* template */
+var __vue_template__ = __webpack_require__(128)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (typeof __vue_exports__.default === "object") {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5", __vue_options__)
+  } else {
+    hotAPI.reload("data-v-5", __vue_options__)
   }
 })()}
 if (__vue_options__.functional) {console.error("[vue-loader] CodeExample.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -3290,90 +3290,14 @@ Prism.languages.js = Prism.languages.javascript;
 /***/ function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){with(this) {
-  return _h('div', {
-    staticClass: "pure-g"
-  }, [_h('div', {
-    staticClass: "pure-u-1"
-  }, [_h('div', {
-    staticClass: "pure-menu pure-menu-horizontal"
-  }, [_h('ul', {
-    staticClass: "pure-menu-list"
-  }, [_h('li', {
-    class: {
-      'pure-menu-item': true, 'pure-menu-selected': content === 'demo'
-    }
-  }, [_h('a', {
-    staticClass: "pure-menu-link",
-    on: {
-      "click": function($event) {
-        content = 'demo'
-      }
-    }
-  }, [_m(0), "\n                        Demo\n                    "])]), " ", _h('li', {
-    class: {
-      'pure-menu-item': true, 'pure-menu-selected': content === 'html'
-    }
-  }, [_h('a', {
-    staticClass: "pure-menu-link",
-    on: {
-      "click": function($event) {
-        content = 'html'
-      }
-    }
-  }, [_m(1), "\n                        HTML\n                    "])]), " ", _h('li', {
-    class: {
-      'pure-menu-item': true, 'pure-menu-selected': content === 'js'
-    }
-  }, [_h('a', {
-    staticClass: "pure-menu-link",
-    on: {
-      "click": function($event) {
-        content = 'js'
-      }
-    }
-  }, [_m(2), "\n                        JavaScript\n                    "])])])])]), " ", _h('div', {
-    directives: [{
-      name: "show",
-      value: (content === 'demo'),
-      expression: "content === 'demo'"
-    }],
-    staticClass: "pure-u-1"
-  }, [_t("example")]), " ", _h('div', {
-    directives: [{
-      name: "show",
-      value: (content === 'html'),
-      expression: "content === 'html'"
-    }],
-    staticClass: "pure-u-1"
-  }, [_h('code-block', {
-    staticClass: "language-html"
-  }, [_t("code-html")])]), " ", _h('div', {
-    directives: [{
-      name: "show",
-      value: (content === 'js'),
-      expression: "content === 'js'"
-    }],
-    staticClass: "pure-u-1"
-  }, [_h('code-block', {
-    staticClass: "language-javascript"
-  }, [_t("code-js")])])])
-}},staticRenderFns: [function (){with(this) {
-  return _h('i', {
-    staticClass: "icon-play"
-  })
-}},function (){with(this) {
-  return _h('i', {
-    staticClass: "icon-html5"
-  })
-}},function (){with(this) {
-  return _h('i', {
-    staticClass: "icon-code"
-  })
-}}]}
+  return _h('pre', [_h('code', {
+    ref: "code"
+  }, [_t("default")])])
+}},staticRenderFns: []}
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-1", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-2", module.exports)
   }
 }
 
@@ -3527,7 +3451,7 @@ module.exports={render:function (){with(this) {
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-4", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-3", module.exports)
   }
 }
 
@@ -3537,14 +3461,90 @@ if (false) {
 /***/ function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){with(this) {
-  return _h('pre', [_h('code', {
-    ref: "code"
-  }, [_t("default")])])
-}},staticRenderFns: []}
+  return _h('div', {
+    staticClass: "pure-g"
+  }, [_h('div', {
+    staticClass: "pure-u-1"
+  }, [_h('div', {
+    staticClass: "pure-menu pure-menu-horizontal"
+  }, [_h('ul', {
+    staticClass: "pure-menu-list"
+  }, [_h('li', {
+    class: {
+      'pure-menu-item': true, 'pure-menu-selected': content === 'demo'
+    }
+  }, [_h('a', {
+    staticClass: "pure-menu-link",
+    on: {
+      "click": function($event) {
+        content = 'demo'
+      }
+    }
+  }, [_m(0), "\n                        Demo\n                    "])]), " ", _h('li', {
+    class: {
+      'pure-menu-item': true, 'pure-menu-selected': content === 'html'
+    }
+  }, [_h('a', {
+    staticClass: "pure-menu-link",
+    on: {
+      "click": function($event) {
+        content = 'html'
+      }
+    }
+  }, [_m(1), "\n                        HTML\n                    "])]), " ", _h('li', {
+    class: {
+      'pure-menu-item': true, 'pure-menu-selected': content === 'js'
+    }
+  }, [_h('a', {
+    staticClass: "pure-menu-link",
+    on: {
+      "click": function($event) {
+        content = 'js'
+      }
+    }
+  }, [_m(2), "\n                        JavaScript\n                    "])])])])]), " ", _h('div', {
+    directives: [{
+      name: "show",
+      value: (content === 'demo'),
+      expression: "content === 'demo'"
+    }],
+    staticClass: "pure-u-1"
+  }, [_t("example")]), " ", _h('div', {
+    directives: [{
+      name: "show",
+      value: (content === 'html'),
+      expression: "content === 'html'"
+    }],
+    staticClass: "pure-u-1"
+  }, [_h('code-block', {
+    staticClass: "language-html"
+  }, [_t("code-html")])]), " ", _h('div', {
+    directives: [{
+      name: "show",
+      value: (content === 'js'),
+      expression: "content === 'js'"
+    }],
+    staticClass: "pure-u-1"
+  }, [_h('code-block', {
+    staticClass: "language-javascript"
+  }, [_t("code-js")])])])
+}},staticRenderFns: [function (){with(this) {
+  return _h('i', {
+    staticClass: "icon-play"
+  })
+}},function (){with(this) {
+  return _h('i', {
+    staticClass: "icon-html5"
+  })
+}},function (){with(this) {
+  return _h('i', {
+    staticClass: "icon-code"
+  })
+}}]}
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-7", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-5", module.exports)
   }
 }
 
@@ -3605,18 +3605,13 @@ __WEBPACK_IMPORTED_MODULE_7__vee_validate__["Validator"].extend('verify_coupon',
     getMessage: function getMessage(field) {
         return 'The ' + field + ' is not a valid coupon.';
     },
-    // If you want to return a promise you will have to make sure it always resolves
-    // to an object containing a 'valid' property which is a boolean state of the validation.
     validate: function validate(value) {
         return new Promise(function (resolve) {
-            var validCoupons = ['SUMMER2016', 'WINTER2016', 'FALL2016'
-            // I don't like spring :(
-            ];
+            var validCoupons = ['SUMMER2016', 'WINTER2016', 'FALL2016'];
 
-            // Simulate getting data from slow backend api.
             setTimeout(function () {
                 resolve({
-                    valid: !!~validCoupons.indexOf(value.toUpperCase())
+                    valid: value && !!~validCoupons.indexOf(value.toUpperCase())
                 });
             }, 500);
         });
