@@ -68,7 +68,9 @@
                 },
                 created() {
                     // Make sure you extend before any validation occurs
-                    // to avoid validating using non-existant rules.
+                    // to avoid validating using non-existant rules
+                    // you might want to extract any extending to your entry or bootstrapping phase
+                    // to avoid re-adding an already attached rule which will throw an exception.
                     this.$validator.extend('verify_coupon', {
                         getMessage: (field) => `The ${field} is not a valid coupon.`,
                         // If you want to return a promise you will have to make sure it always resolves
@@ -84,13 +86,13 @@
                             // Simulate getting data from slow backend api.
                             setTimeout(() => {
                                 resolve({
-                                    valid: !! ~validCoupons.indexOf(value.toUpperCase())
+                                    valid: value && !! ~validCoupons.indexOf(value.toUpperCase())
                                 });
                             }, 500);
                         })
                     });
 
-                    this.$validator.attach('coupon', 'verify_coupon');
+                    this.$validator.attach('coupon', 'required|verify_coupon');
                 }
             }
         </div>
@@ -116,10 +118,10 @@ export default {
             this.$validator.validate('coupon', this.coupon).then(result => {
                 this.discounted = result;
             });
-        },
-        created() {
-            this.$validator.attach('coupon', 'verify_coupon');
         }
+    },
+    created() {
+        this.$validator.attach('coupon', 'required|verify_coupon');
     }
 }
 </script>
