@@ -5,7 +5,7 @@ import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import Vue from 'vue';
 import moment from 'moment';
 import VueRouter from 'vue-router';
-import VeeValidate, { Validator } from './vee-validate';
+import VeeValidate, { Validator } from 'vee-validate';
 import CodeExample from './components/CodeExample.vue';
 import CodeBlock from './components/CodeBlock.vue';
 import App from './App.vue';
