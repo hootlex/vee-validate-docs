@@ -8,6 +8,9 @@
         "eslint:recommended",
         "airbnb-base"
     ],
+    "plugins": [
+        "html"
+    ],
     "parserOptions": {
         "sourceType": "module"
     },
