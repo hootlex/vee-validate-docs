@@ -24,7 +24,7 @@ export default {
             let len;
             let min = 1e3;
             let mat;
-
+            // eslint-disable-next-line
             while (mat = re.exec(txt)) {
                 len = mat[0].length;
 
