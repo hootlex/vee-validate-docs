@@ -18,17 +18,12 @@ git clone https://github.com/logaretm/vee-validate-docs.git
 npm install
 ```
 
-**Build and test locally:**
-```
-npm run build
-```
-
-**Webpack Dev with HMR:**
+**Build and test locally with dev server:**
 ```
 npm run dev
 ```
 
 **Build for production:**
 ```
-npm run prod
+npm run build
 ```
