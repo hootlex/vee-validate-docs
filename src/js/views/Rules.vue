@@ -20,9 +20,9 @@
         <p>
             <code class="inline">vee-validate</code> Comes out of the box with many validation rules, which are:
         </p>
-        <div class="pure-g">
-            <div v-for="group in rules" :class="'pure-u-1-' + rules.length">
-                <ul>
+        <div class="columns is-multiline">
+            <div v-for="group in rules" :class="'column is-' + 12 / rules.length">
+                <ul class="list-circle">
                     <li v-for="rule in group"><router-link class="link" :to="{ name: 'rules', hash: '#rule-' + rule }">{{ rule }}</router-link></li>
                 </ul>
             </div>

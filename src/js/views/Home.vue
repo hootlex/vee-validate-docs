@@ -83,7 +83,7 @@
         <p>There are more than 20 rules available to validate your inputs:</p>
         <div class="columns is-multiline">
             <div v-for="group in rules" :class="'column is-' + 12 / rules.length">
-                <ul class="rules-list">
+                <ul class="list-circle">
                     <li v-for="rule in group"><router-link class="link" :to="{ name: 'rules', hash: '#rule-' + rule }">{{ rule }}</router-link></li>
                 </ul>
             </div>
