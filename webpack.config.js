@@ -6,12 +6,12 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 let config = {
     entry: {
-        bundle: path.join(__dirname, 'src', 'main'),
+        bundle: path.join(__dirname, 'src/js/main'),
         vendor: ['vue', 'vue-router', 'moment', 'vee-validate', 'collectionsjs']
     },
     output: {
         path: path.join(__dirname, 'docs/assets'),
-        filename: '[name].js',
+        filename: isProduction ? 'js/[name].min.js' : 'js/[name].js',
         publicPath: '/assets/'
     },
     devServer: {
