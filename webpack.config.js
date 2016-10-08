@@ -1,6 +1,5 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const webpack = require('webpack');
 const merge = require('webpack-merge');
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -32,22 +31,16 @@ let config = {
                 }
             },
             {
-                test: /\.css$/,
-                loader: ExtractTextPlugin.extract({
-                    fallbackLoader: 'style',
-                    loader: 'css'
-                })
-            },
-            {
                 test: /\.vue$/,
-                loader: 'vue'
+                loader: 'eslint',
+                exclude: /node_modules/,
+                enforce: 'pre'
             },
             {
-                test: /.scss$/,
-                loader: ExtractTextPlugin.extract({
-                    fallbackLoader: 'style',
-                    loader: ['css', 'sass']
-                })
+                test: /\.js$/,
+                loader: 'eslint',
+                exclude: /node_modules/,
+                enforce: 'pre'
             },
             {
                 test: /\.woff(2)?(\?.*)?$/i,
@@ -82,38 +75,13 @@ let config = {
                 fallbackLoader: 'style',
                 loader: ['css', 'sass']
             })
-        },
-        plugins: [
-            new ExtractTextPlugin('[name].css')
-        ]
-    },
-    plugins: [
-        new ExtractTextPlugin('[name].css'),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            filename: 'vendor.js'
-        }),
-        new webpack.optimize.MinChunkSizePlugin({ minChunkSize: 51200 })
-    ]
+        }
+    }
 };
 
-if (isProduction) {
-    config = merge(config, {
-        plugins: [
-            new webpack.optimize.UglifyJsPlugin({
-                mangle: true,
-                compress: {
-                    warnings: false
-                }
-            }),
-            new webpack.DefinePlugin({
-                'process.env': {
-                    BABEL_ENV: JSON.stringify(process.env.NODE_ENV),
-                    NODE_ENV: JSON.stringify(process.env.NODE_ENV)
-                },
-            })
-        ]
-    });
-}
+config = merge(
+    config,
+    isProduction ? require('./webpack.config.prod.js') : require('./webpack.config.dev.js')
+);
 
 module.exports = config;
