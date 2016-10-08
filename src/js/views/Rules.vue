@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2 id="syntax" class="content-subhead"><a href="#syntax">Syntax</a></h2>
+        <h2 id="syntax" class="title is-4"><a href="#syntax">Syntax</a></h2>
         <p>
             The validation rules have a very simple syntax similar to <a href="https://laravel.com/docs/5.2/validation" class="link">Laravel validation syntax</a>.
             A validation expression is a string of a series of validators separated by a pipe <code class="inline">|</code>:
@@ -16,7 +16,7 @@
                 <b>Note:</b> The validators (rules) and their parameters are statically saved, in order to update some validation rule, you have to attach it again with the new parameters and it will be overwritten.
             </div>
         </p>
-        <h2 id="available-rules" class="content-subhead"><a href="#available-rules">Available Rules</a></h2>
+        <h2 id="available-rules" class="title is-4"><a href="#available-rules">Available Rules</a></h2>
         <p>
             <code class="inline">vee-validate</code> Comes out of the box with many validation rules, which are:
         </p>
@@ -458,7 +458,7 @@
                 </div>
             </div>
         </div>
-        <h2 id="custom-rules" class="content-subhead"><a href="#custom-rules">Custom Rules</a></h2>
+        <h2 id="custom-rules" class="title is-4"><a href="#custom-rules">Custom Rules</a></h2>
         <p>
             You can easily add custom rules to the validators, but your custom validation rules must adhere to a contract, or certain structure:
             <br><br>
@@ -534,7 +534,7 @@
                  extending a new rule that have the same name as an existing rule will throw a <code>ValidatorException</code> with an error message.
             </div>
         </p>
-        <h2 id="custom-messages" class="content-subhead"><a href="#custom-messages">Custom Messages</a></h2>
+        <h2 id="custom-messages" class="title is-4"><a href="#custom-messages">Custom Messages</a></h2>
         <p>
             Of course you might need to overwrite the error messages, or add new ones. The Validator class and its instances provide an <code class="inline">updateDictionary</code> method.
             which will merge the messages with the internal dictionary, overwriting any duplicates.
@@ -569,7 +569,7 @@
                 <b>Note:</b> You must provide the messages in an object path like: <code>dictionary.locale.message</code>.
             </div>
         </p>
-        <h2 id="custom-attributes" class="content-subhead"><a href="#custom-attributes">Custom Attributes</a></h2>
+        <h2 id="custom-attributes" class="title is-4"><a href="#custom-attributes">Custom Attributes</a></h2>
         <p>
             Like the custom messages, the validators share a dictionary containing the attribute names, for example if you want to use "Email Address" instead of "email" in your error messages, this can be easily acheived by including an <code>attributes</code> object in the dictionary.
             <br><br>Unlike messages, no attributes are included in the default dictionary.

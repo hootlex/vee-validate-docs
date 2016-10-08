@@ -1,5 +1,7 @@
 const path = require('path');
 const merge = require('webpack-merge');
+const poststylus = require('poststylus');
+const webpack = require('webpack');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -13,6 +15,13 @@ let config = {
         filename: 'js/[name].js',
         publicPath: '/assets/'
     },
+    plugins: [
+        new webpack.LoaderOptionsPlugin({
+            stylus: {
+                use: [poststylus(['autoprefixer'])]
+            }
+        })
+    ],
     module: {
         loaders: [
             {

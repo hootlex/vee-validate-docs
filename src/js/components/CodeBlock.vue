@@ -1,10 +1,9 @@
 <template lang="html">
-    <pre><code ref="code"><slot></slot></code></pre>
+    <pre ref="code"><code><slot></slot></code></pre>
 </template>
 
 <script>
-import Prism from 'prismjs';
-import 'prismjs/plugins/show-language/prism-show-language.js';
+import hljs from 'highlight.js';
 
 export default {
     methods: {
@@ -43,7 +42,7 @@ export default {
     },
     mounted() {
         this.removeWhitespace();
-        Prism.highlightElement(this.$refs.code);
+        hljs.highlightBlock(this.$refs.code);
     }
 };
 </script>

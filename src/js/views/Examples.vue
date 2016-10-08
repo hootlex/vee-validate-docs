@@ -1,12 +1,12 @@
 <template>
     <div>
-        <h2 id="debounce-example" class="content-subhead"><a href="#debounce-example">Delayed Validation (Debounced)</a></h2>
+        <h2 id="debounce-example" class="title is-4"><a href="#debounce-example">Delayed Validation (Debounced)</a></h2>
         <p>
             You can specify a delay to debounce the input event, a case scenario that you may want to wait for the user to stop typing then validate the field.
             This can be achieved by adding a <code class="inline">data-delay</code> attribute on the field being validated, and assign it the number of milliseconds you want to wait for.
         </p>
         <delay-example></delay-example>
-        <h2 id="reject-example" class="content-subhead"><a href="#reject-example">Reject Invalid Files</a></h2>
+        <h2 id="reject-example" class="title is-4"><a href="#reject-example">Reject Invalid Files</a></h2>
         <p>
             After validating a file, you may want to reject the uploaded file if it fails the validation, this can be done by adding
             the <code class="inline">reject</code> modifier to directive. so you would use it like this: <code class="inline">v-validate.reject</code>.
@@ -15,7 +15,7 @@
             </div>
         </p>
         <reject-example></reject-example>
-        <h2 id="validate-data-example" class="content-subhead"><a href="#validate-data-example">Validate $data</a></h2>
+        <h2 id="validate-data-example" class="title is-4"><a href="#validate-data-example">Validate $data</a></h2>
         <p>
             The basic approach relies on listening to the <code class="inline">input</code> or the <code class="inline">change</code> events depending on the file type.
             However most of the time, your values are bound to your Vue instance and some code may change their inputs programatically, the basic approach won't detect this change.
@@ -42,12 +42,12 @@
                 <b>Note:</b> When you provide a binding expression to the directive, <code>delay</code> attribute and <code>reject</code> modifier won't have an effect anymore. so you might want to handle debouncing the inputs yourself.
             </div>
          </p>
-         <h2 id="validate-form" class="content-subhead"><a href="#validate-form">Validate Form Before Submit</a></h2>
+         <h2 id="validate-form" class="title is-4"><a href="#validate-form">Validate Form Before Submit</a></h2>
          <p>
             You may want to trigger all inputs validation before submitting a form, maybe display an alert or prevent form submission if any errors are detected.
          </p>
          <event-example></event-example>
-         <h2 id="locale-example" class="content-subhead"><a href="#locale-example">Localized Messages</a></h2>
+         <h2 id="locale-example" class="title is-4"><a href="#locale-example">Localized Messages</a></h2>
          <p>
             You may want to display error messages in different languages, here is an example on how you may do that. The language below is Arabic (RTL):
          </p>
@@ -58,7 +58,7 @@
                 <br><br>Keep in mind that those pretty names are only used when generating error messages.
             </div>
          </p>
-         <h2 id="scope-example" class="content-subhead"><a href="#scope-example">Scopes</a></h2>
+         <h2 id="scope-example" class="title is-4"><a href="#scope-example">Scopes</a></h2>
          <p>
             By default the scope of the validator is the same as the Vue instance that owns it, sometimes you may have multiple fields with the same name, they are in different forms and serve different purposes.
             The validator will then treat those two fields as the same field which will cause problems detecting the input and displaying the errors.
@@ -68,7 +68,7 @@
             For convienece you may add the <code class="inline">data-scope</code> on the form that owns the inputs, you don't have to add the attribute on each and every input.
          </p>
          <scope-example></scope-example>
-         <h2 id="coupon-example" class="content-subhead"><a href="#coupon-example">Custom Rule: Coupon</a></h2>
+         <h2 id="coupon-example" class="title is-4"><a href="#coupon-example">Custom Rule: Coupon</a></h2>
          <p>
             Let's say you want to validate something specific to your app domain that isn't provided by the default validators,
             for example lets validate a user coupon on checkout. If it is a valid coupon then you discount it for him, if not he pays the full price :(
@@ -81,7 +81,7 @@
             <code class="inline">Vee-Validate</code> allows the usage of async validators, but it requires them to return a promise that resolves with an object containing the property <code class="inline">valid</code> which should equal a boolean state of the validation status.
          </p>
          <coupon-example></coupon-example>
-         <h2 id="radio-buttons-example" class="content-subhead"><a href="#radio-buttons-example">Radio Buttons</a></h2>
+         <h2 id="radio-buttons-example" class="title is-4"><a href="#radio-buttons-example">Radio Buttons</a></h2>
          <p>
             vee-validate also supports validating radio buttons, you can use whatever rules you want on them but only few rules makes sense, like <code class="inline">required</code>.
             One thing to note in this example is that you only need to use the directive on one of the radio buttons, you don't need to attach it on every one, they all have to share the same name though.

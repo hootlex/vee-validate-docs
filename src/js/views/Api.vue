@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2 id="error-bag" class="content-subhead"><a href="#error-bag">ErrorBag</a></h2>
+        <h2 id="error-bag" class="title is-4"><a href="#error-bag">ErrorBag</a></h2>
         <p>
             The ErrorBag class is a wrapper around an array, and is standalone and has no dependencies, you can use it in your code for any reason:
             <code-block class="language-javascript">
@@ -32,7 +32,7 @@
                 <li><code class="inline">remove(String field)</code> Removes all errors for a specified field from the internal array.</li>
             </ul>
         </p>
-        <h2 id="validator" class="content-subhead"><a href="#validator">Validator</a></h2>
+        <h2 id="validator" class="title is-4"><a href="#validator">Validator</a></h2>
         <p>
             The validator is injected to the Vue instance as <code class="inline">$validator</code> automatically.
             However it is also a stand alone class and can be used separately for programmatically validating values.
@@ -96,7 +96,7 @@
                 Validator.setDefaultLocale(); // resets to english, again for all newly created validators, previously created ones won't be touched.
             </code-block>
         </p>
-        <h2 id="validator-example" class="content-subhead"><a href="#validator-example">Validator Example</a></h2>
+        <h2 id="validator-example" class="title is-4"><a href="#validator-example">Validator Example</a></h2>
         <p>
             Here is an example of using the validator without the directive, which means you will be responsible for monitoring input changes on your own, and calling the API methods as you see fit.
             This example uses a Vue instance to simplify things, but it can be used in plain JavaScript as well.

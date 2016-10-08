@@ -1,13 +1,13 @@
 <template>
     <div>
-        <h2 id="translation" class="content-subhead"><a href="#translation">Translation</a></h2>
+        <h2 id="translation" class="title is-4"><a href="#translation">Translation</a></h2>
         <p>
             This plugin only comes with English messages to keep things small, but it was built with flexible message generation in mind.
             <br>
             The <a href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/en.js" class="link" target="github">English messages file</a> is an example on how you would structure those messages.
             Then you may want to update the validator dictionary, which should happen once in your app startup. still you may update them whenever you want in any point of your app, review the <router-link :to="{ name: 'rules', hash: '#custom-messages' }" class="link">custom messages</router-link> here.
         </p>
-        <h2 id="attributes-data-as" class="content-subhead"><a href="#attributes-data-as">Attributes (data-as)</a></h2>
+        <h2 id="attributes-data-as" class="title is-4"><a href="#attributes-data-as">Attributes (data-as)</a></h2>
         <p>
             Seeing 'first_name' in your error messages can't be very good for your user experience, this plugin offer a couple of solutions:
 
@@ -19,7 +19,7 @@
             Now when any error message is generated for this input will use the <code>data-as</code> value instead of the actual field name. this is also the same for binding expressions.
             While this is very useful for simple setups and displaying localized names, you might want to check the approach below.
         </p>
-        <h2 id="attributes-dictionary" class="content-subhead"><a href="#attributes-dictionary">Attributes (Dictionary)</a></h2>
+        <h2 id="attributes-dictionary" class="title is-4"><a href="#attributes-dictionary">Attributes (Dictionary)</a></h2>
         <p>
             All validators have access to a simple dictionary that is shared between all of them, this dictionary contains localized error messages and attributes, if the validator finds a localized attribute name for that field it will be used instead of the field name.
             Pretty much like <code>data-as</code> but <code>data-as</code> takes priorty if both are found.
@@ -69,7 +69,7 @@
         <div>
             A working example can be found <router-link class="link" :to="{ name: 'examples', hash: '#locale-example' }">here</router-link>.
         </div>
-        <h2 id="localized-files" class="content-subhead"><a href="#localized-files">Localized Files</a></h2>
+        <h2 id="localized-files" class="title is-4"><a href="#localized-files">Localized Files</a></h2>
         <p>
             In the <a class="link" href="https://github.com/logaretm/vee-validate/tree/master/dist/locale" target="github"><code class="inline">dist/locale</code></a> directory of this plugin, is a collection of localized files.
             If you can't find your locale, you could help this plugin by contributing a localized version to the <a href="https://github.com/logaretm/vee-validate" class="link" target="github">repo</a>. I will happily accept it.

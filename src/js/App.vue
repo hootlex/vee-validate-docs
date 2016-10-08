@@ -1,55 +1,54 @@
 <template>
-    <div id="layout" ref="layout">
-        <!-- Menu toggle -->
-        <a href="#menu" id="menuLink" class="menu-link" ref="menuLink">
-            <!-- Hamburger icon -->
-            <span></span>
-        </a>
-
-        <div id="menu" ref="menu">
-            <div class="pure-menu">
-                <router-link :to="{ name: 'home' }" class="pure-menu-heading">Vee Validate</router-link>
-                <ul class="pure-menu-list">
-                    <li class="pure-menu-item">
-                        <router-link :to="{ name: 'home' }" class="pure-menu-link">Getting Started</router-link>
-                    </li>
-                    <li class="pure-menu-item">
-                        <router-link :to="{ name: 'home', hash: '#installation' }" class="pure-menu-link">Installation</router-link>
-                    </li>
-                    <li class="pure-menu-item">
-                        <router-link :to="{ name: 'home', hash: '#basic-example' }" class="pure-menu-link">Basic Example</router-link>
-                    </li>
-                    <li class="pure-menu-item">
-                        <router-link :to="{ name: 'home', hash: '#render-errors' }" class="pure-menu-link">Rendering Errors</router-link>
-                    </li>
-                    <li class="pure-menu-item">
-                        <router-link :to="{ name: 'examples' }" class="pure-menu-link">Examples</router-link>
-                    </li>
-                    <li class="pure-menu-item">
-                        <router-link :to="{ name: 'rules' }" class="pure-menu-link">Validation Rules</router-link>
-                    </li>
-                    <li class="pure-menu-item">
-                        <router-link :to="{ name: 'localization' }" class="pure-menu-link">Localization</router-link>
-                    </li>
-                    <li class="pure-menu-item">
-                        <router-link :to="{ name: 'api' }" class="pure-menu-link">API Reference</router-link>
-                    </li>
-                    <li class="pure-menu-item">
-                        <router-link :to="{ name: 'home', hash: '#configuration' }" class="pure-menu-link">Configuration</router-link>
-                    </li>
-                </ul>
+    <div>
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title is-1">
+                        {{ $route.meta.title || 'Vee-Validate' }}
+                    </h1>
+                    <h2 class="subtitle">
+                        {{ $route.meta.subtitle }}
+                    </h2>
+                </div>
             </div>
-            <div class="about flex-center">
-                <a target="github" href="https://github.com/logaretm/vee-validate"><i class="icon-github"></i></a>
+        </section>
+        <div class="container columns">
+            <div class="column is-3">
+                <aside class="menu sidebar">
+                    <p class="menu-label">
+                        General
+                    </p>
+                    <ul class="menu-list">
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Customers</a></li>
+                    </ul>
+                    <p class="menu-label">
+                        Administration
+                    </p>
+                    <ul class="menu-list">
+                        <li><a href="#">Team Settings</a></li>
+                        <li>
+                            <a class="is-active" href="#">Manage Your Team</a>
+                            <ul>
+                                <li><a href="#">Members</a></li>
+                                <li><a href="#">Plugins</a></li>
+                                <li><a href="#">Add a member</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Invitations</a></li>
+                        <li><a href="#">Authentication</a></li>
+                    </ul>
+                    <p class="menu-label">
+                        Transactions
+                    </p>
+                    <ul class="menu-list">
+                        <li><a href="#">Payments</a></li>
+                        <li><a href="#">Transfers</a></li>
+                        <li><a href="#">Balance</a></li>
+                    </ul>
+                </aside>
             </div>
-        </div>
-
-        <div id="main">
-            <div class="header">
-                <h1>{{ $route.meta.title || 'Vee-Validate' }}</h1>
-                <h2>{{ $route.meta.subtitle }}</h2>
-            </div>
-            <div class="content">
+            <div class="column content-container">
                 <transition name="fade" mode="out-in">
                     <router-view></router-view>
                 </transition>
@@ -59,39 +58,5 @@
 </template>
 
 <script>
-export default {
-    mounted() {
-        const layout = this.$refs.layout;
-        const menu = this.$refs.menu;
-        const menuLink = this.$refs.menuLink;
-
-        const toggleClass = (element, className) => {
-            const classes = element.className.split(/\s+/);
-            const length = classes.length;
-
-            for (let i = 0; i < length; i++) {
-                if (classes[i] === className) {
-                    classes.splice(i, 1);
-                    break;
-                }
-            }
-            // The className is not found
-            if (length === classes.length) {
-                classes.push(className);
-            }
-
-            // eslint-disable-next-line
-            element.className = classes.join(' ');
-        };
-
-        menuLink.onclick = (e) => {
-            const active = 'active';
-
-            e.preventDefault();
-            toggleClass(layout, active);
-            toggleClass(menu, active);
-            toggleClass(menuLink, active);
-        };
-    }
-};
+export default {};
 </script>

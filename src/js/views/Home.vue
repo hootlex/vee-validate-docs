@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2 id="about" class="content-subhead"><a href="#about">What is vee-validate?</a></h2>
+        <h2 id="about" class="title is-4"><a href="#about">What is vee-validate?</a></h2>
         <p>
             This is a lightweight plugin for <a href="https://vuejs.org/" class="link">Vue.js</a> that allows you to validate input fields, and display errors.
             <br><br>
@@ -13,10 +13,10 @@
             This plugin is inspired by <a href="https://laravel.com/" class="link">PHP Framework Laravel's validation syntax</a>.
             <br><br>It also supports Vue 2.0. All examples here are built using Vue 2.0 with the plugin.
         </p>
-        <h2 id="installation" class="content-subhead"><a href="#installation">Installation</a></h2>
+        <h2 id="installation" class="title is-4"><a href="#installation">Installation</a></h2>
         <p>
             You can install this plugin via <a class="link" href="#npm">npm</a> or <a class="link" href="#bower">bower</a> or via a <a class="link" href="#cdn">CDN</a>.
-            <h3 id="npm" class="content-subhead"><a href="#npm">npm</a></h3>
+            <h2 id="npm" class="title is-4"><a href="#npm">npm</a></h2>
             <b>Vue 1.x</b>
             <code-block class="language-bash">npm install vee-validate --save</code-block>
             <b>Vue 2.x</b>
@@ -24,13 +24,12 @@
             <div class="note">
                 <b>Note:</b> The latest version of this plugin will keep pointing to the Vue 1.x version, until Vue 2.0 is released which is soon, then the latest will point to Vue 2.0 while another tag will be used for the Vue 1.x versions.
             </div>
-            <h3 id="bower" class="content-subhead"><a href="#bower">bower</a></h3>
+            <h2 id="bower" class="title is-4"><a href="#bower">bower</a></h2>
             <b>Vue 1.x</b>
             <code-block class="language-bash">bower install vee-validate#1.0.0-beta.5 --save</code-block>
             <b>Vue 2.x</b>
             <code-block class="language-bash">bower install vee-validate#2.0.0-beta.10 --save</code-block>
-            <br>
-            <h3 id="cdn" class="content-subhead"><a href="#cdn">CDN</a></h3>
+            <h2 id="cdn" class="title is-4"><a href="#cdn">CDN</a></h2>
             Head over to <a href="https://www.jsdelivr.com/projects/vee-validate" target="jsdelivr">jsdelivr</a> and grab the latest version.
 
             Then you may use it like this:
@@ -50,7 +49,7 @@
                 Vue.use(VeeValidate);
             </code-block>
         </p>
-        <h2 id="basic-example" class="content-subhead"><a href="#basic-example">Basic Example</a></h2>
+        <h2 id="basic-example" class="title is-4"><a href="#basic-example">Basic Example</a></h2>
         <p>
             All you need is to add the <code class="inline">v-validate</code> directive to the input you wish to validate.
             <br><br>
@@ -66,7 +65,7 @@
             <b>Note:</b> The field name that appears in the error messages is usually the input's <code>name</code> attribute, unless you passed a value from the vue instance <code>$data</code> object,
             The name will be then the expression name, check the <router-link :to="{ name: 'examples', hash: '#validate-data-example' }">data validation example</router-link>.
         </div>
-        <h2 id="render-errors" class="content-subhead"><a href="#render-errors">Rendering Errors</a></h2>
+        <h2 id="render-errors" class="title is-4"><a href="#render-errors">Rendering Errors</a></h2>
         <p>
             Naturally, you would want to display the errors to your users. The plugin augments your Vue instance with a private validator object and a public errors data object.
             You are responsible for how the errors should be rendered.
@@ -80,17 +79,17 @@
             </ul>
             There are a few more <router-link class="link" :to="{ name: 'api', hash: '#error-bag'}">methods</router-link> that you can use to manipulate the errors object.
         </p>
-        <h2 id="available-rules" class="content-subhead"><a href="#available-rules">Available Rules</a></h2>
+        <h2 id="available-rules" class="title is-4"><a href="#available-rules">Available Rules</a></h2>
         <p>There are more than 20 rules available to validate your inputs:</p>
-        <div class="pure-g">
-            <div v-for="group in rules" :class="'pure-u-1-' + rules.length">
-                <ul>
+        <div class="columns is-multiline">
+            <div v-for="group in rules" :class="'column is-' + 12 / rules.length">
+                <ul class="rules-list">
                     <li v-for="rule in group"><router-link class="link" :to="{ name: 'rules', hash: '#rule-' + rule }">{{ rule }}</router-link></li>
                 </ul>
             </div>
         </div>
         <p>Visit the <router-link class="link" :to="{ name: 'rules', hash: '#available-rules' }">rules documentation</router-link> to learn more about how to use each rule, and how to <router-link :to="{ name: 'rules', hash: '#custom-rules' }" class="link">create your own</router-link>.</p>
-        <h2 id="configuration" class="content-subhead"><a href="#configuration">Configuration</a></h2>
+        <h2 id="configuration" class="title is-4"><a href="#configuration">Configuration</a></h2>
         <p>
             You may need to configure some options to tweak some of the plugin internals, this is not required, but could cause conflicts. For example: if you are using a property called <code class="inline">errors</code> on your vue instance this may cause conflicts.
              Here is how you would set up the options along with the default values:

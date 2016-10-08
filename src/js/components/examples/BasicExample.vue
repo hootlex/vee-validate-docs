@@ -1,10 +1,12 @@
 <template>
     <code-example>
         <form slot="example" class="pure-form pure-form-stacked">
-            <div class="pure-u-1">
-                <label :class="{'error': errors.has('email') }" for="email">Email</label>
-                <input v-validate data-rules="required|email" :class="{'pure-input-1': true, 'has-error': errors.has('email') }" name="email" type="text" placeholder="Email">
-                <span class="error" v-show="errors.has('email')">{{ errors.first('email') }}</span>
+            <div class="column is-12">
+                <label class="label" for="email">Email</label>
+                <p :class="{ 'control': true }">
+                    <input v-validate data-rules="required|email" :class="{'input': true, 'is-danger': errors.has('email') }" name="email" type="text" placeholder="Email">
+                    <span v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</span>
+                </p>
             </div>
         </form>
 

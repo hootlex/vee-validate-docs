@@ -31,9 +31,9 @@ module.exports = {
                         fallbackLoader: 'style',
                         loader: 'css'
                     }),
-                    sass: ExtractTextPlugin.extract({
+                    stylus: ExtractTextPlugin.extract({
                         fallbackLoader: 'style',
-                        loader: ['css', 'sass']
+                        loader: ['css', 'stylus']
                     })
                 }
             }
@@ -49,10 +49,10 @@ module.exports = {
                 })
             },
             {
-                test: /.(sass|scss)$/,
+                test: /.styl$/,
                 loader: ExtractTextPlugin.extract({
                     fallbackLoader: 'style',
-                    loader: ['css', 'sass']
+                    loader: ['css', 'stylus']
                 })
             }
         ]

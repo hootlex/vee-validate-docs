@@ -125,12 +125,9 @@ export default {
 </script>
 
 
-<style lang="sass">
-.discounted {
+<style lang="stylus">
+.discounted
     text-decoration: line-through
-}
-
-.SeemsGood {
+.SeemsGood
     color: #41b883
-}
 </style>

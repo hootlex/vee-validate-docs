@@ -1,3 +1,5 @@
+import 'bulma/css/bulma.css';
+import 'highlight.js/styles/github-gist.css';
 import Vue from 'vue';
 import moment from 'moment';
 import VueRouter from 'vue-router';
@@ -6,7 +8,7 @@ import CodeExample from './components/CodeExample.vue';
 import CodeBlock from './components/CodeBlock.vue';
 import App from './App.vue';
 import routerConfig from './routerConfig';
-import '../sass/main.scss';
+import '../stylus/app.styl';
 
 Validator.installDateTimeValidators(moment);
 Vue.use(VeeValidate);
