@@ -23,9 +23,9 @@ export default {
             const re = /^[\t ]+/gm;
             let len;
             let min = 1e3;
-            let mat = re.exec(txt);
+            let mat;
 
-            while (mat) {
+            while (mat = re.exec(txt)) {
                 len = mat[0].length;
 
                 if (len < min) {
@@ -39,7 +39,6 @@ export default {
             }
 
             el.textContent = txt.replace(new RegExp(`^${str}`, 'gm'), '');
-            mat = re.exec(txt);
         }
     },
     mounted() {

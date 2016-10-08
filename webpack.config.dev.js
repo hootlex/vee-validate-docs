@@ -8,7 +8,7 @@ module.exports = {
         hot: true,
         inline: true,
         stats: 'errors-only',
-        contentBase: '/public',
+        contentBase: './docs',
         host: '0.0.0.0',
         port: '8080'
     },

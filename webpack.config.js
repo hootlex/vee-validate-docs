@@ -1,5 +1,4 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const merge = require('webpack-merge');
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -11,11 +10,8 @@ let config = {
     },
     output: {
         path: path.join(__dirname, 'docs/assets'),
-        filename: isProduction ? 'js/[name].min.js' : 'js/[name].js',
+        filename: 'js/[name].js',
         publicPath: '/assets/'
-    },
-    devServer: {
-        contentBase: 'docs',
     },
     module: {
         loaders: [
@@ -29,6 +25,11 @@ let config = {
                       ['es2015', { modules: false }]
                     ]
                 }
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue',
+                exclude: /node_modules/,
             },
             {
                 test: /\.vue$/,
@@ -64,18 +65,6 @@ let config = {
                 loader: 'json-loader'
             }
         ]
-    },
-    vue: {
-        loaders: {
-            css: ExtractTextPlugin.extract({
-                fallbackLoader: 'style',
-                loader: 'css'
-            }),
-            sass: ExtractTextPlugin.extract({
-                fallbackLoader: 'style',
-                loader: ['css', 'sass']
-            })
-        }
     }
 };
 
