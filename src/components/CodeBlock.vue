@@ -11,21 +11,21 @@ export default {
         removeWhitespace() {
             const el = this.$refs.code;
             const txt = el.textContent
-                .replace(/^[\r\n]+/, "")
-                .replace(/\s+$/g, "");
+                .replace(/^[\r\n]+/, '')
+                .replace(/\s+$/g, '');
 
             if (/^\S/gm.test(txt)) {
                 el.textContent = txt;
                 return;
             }
 
-            let mat;
             let str;
             const re = /^[\t ]+/gm;
             let len;
             let min = 1e3;
+            let mat = re.exec(txt);
 
-            while (mat = re.exec(txt)) {
+            while (mat) {
                 len = mat[0].length;
 
                 if (len < min) {
@@ -34,19 +34,17 @@ export default {
                 }
             }
 
-            if (min == 1e3) {
+            if (min === 1e3) {
                 return;
             }
 
-            el.textContent = txt.replace(new RegExp("^" + str, 'gm'), "");
+            el.textContent = txt.replace(new RegExp(`^${str}`, 'gm'), '');
+            mat = re.exec(txt);
         }
     },
     mounted() {
         this.removeWhitespace();
         Prism.highlightElement(this.$refs.code);
     }
-}
+};
 </script>
-
-<style>
-</style>

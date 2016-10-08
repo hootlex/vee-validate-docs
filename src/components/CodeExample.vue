@@ -38,12 +38,10 @@
 
 <script>
 export default {
-    data() {
-        return {
-            content: 'demo'
-        }
-    }
-}
+    data: () => ({
+        content: 'demo'
+    })
+};
 </script>
 
 <style lang="sass">

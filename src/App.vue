@@ -69,7 +69,7 @@ export default {
             const classes = element.className.split(/\s+/);
             const length = classes.length;
 
-            for(let i = 0; i < length; i++) {
+            for (let i = 0; i < length; i++) {
                 if (classes[i] === className) {
                     classes.splice(i, 1);
                     break;
@@ -80,8 +80,9 @@ export default {
                 classes.push(className);
             }
 
+            // eslint-disable-next-line
             element.className = classes.join(' ');
-        }
+        };
 
         menuLink.onclick = (e) => {
             const active = 'active';
@@ -92,5 +93,5 @@ export default {
             toggleClass(menuLink, active);
         };
     }
-}
+};
 </script>

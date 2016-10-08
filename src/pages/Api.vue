@@ -112,5 +112,5 @@ export default {
     components: {
         ValidatorExample
     }
-}
+};
 </script>

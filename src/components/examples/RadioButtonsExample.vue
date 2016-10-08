@@ -84,7 +84,7 @@
         <div slot="code-js">
             import Vue from 'vue';
             import VeeValidate from 'vee-validate';
-            
+
             Vue.use(VeeValidate);
 
             new Vue({
@@ -109,19 +109,18 @@
 
 <script>
 export default {
-    data() {
-        return {
-            radio_group_2: '',
-        }
-    },
+    data: () => ({
+        radio_group_2: '',
+    }),
     methods: {
         validateForm() {
             this.$validator.validateAll();
 
             if (! this.errors.any()) {
+                // eslint-disable-next-line
                 alert('All Passes!');
             }
         }
     }
-}
+};
 </script>

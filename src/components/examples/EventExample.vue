@@ -85,23 +85,21 @@
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                email: '',
-                name: '',
-                phone: '',
-                url: ''
-            }
-        },
-        methods: {
-            validateBeforeSubmit(e) {
-                this.$validator.validateAll();
+export default {
+    data: () => ({
+        email: '',
+        name: '',
+        phone: '',
+        url: ''
+    }),
+    methods: {
+        validateBeforeSubmit(e) {
+            this.$validator.validateAll();
 
-                if (this.errors.any()) {
-                    e.preventDefault();
-                }
+            if (this.errors.any()) {
+                e.preventDefault();
             }
         }
     }
+};
 </script>

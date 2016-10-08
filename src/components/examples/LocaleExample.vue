@@ -59,13 +59,12 @@
 
 <script>
 import messages from './../../strings/ar';
+
 export default {
-    data() {
-        return {
-            email: '',
-            phone: '',
-        }
-    },
+    data: () => ({
+        email: '',
+        phone: '',
+    }),
     created() {
         this.$validator.updateDictionary({
             ar: {
@@ -74,5 +73,5 @@ export default {
         });
         this.$validator.setLocale('ar');
     }
-}
+};
 </script>

@@ -101,13 +101,11 @@
 
 <script>
 export default {
-    data() {
-        return {
-            coupon: '',
-            price: 100,
-            discounted: false
-        }
-    },
+    data: () => ({
+        coupon: '',
+        price: 100,
+        discounted: false
+    }),
     computed: {
         discountedPrice() {
             return this.discounted ? this.price - (0.2 * this.price) : this.price;
@@ -123,7 +121,7 @@ export default {
     created() {
         this.$validator.attach('coupon', 'required|verify_coupon');
     }
-}
+};
 </script>
 
 

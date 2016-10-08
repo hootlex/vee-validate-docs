@@ -601,14 +601,12 @@
 
 
 <script>
-import data from './../data.json';
 import Collection from 'collectionsjs';
+import data from './../data.json';
 
 export default {
-    data() {
-        return {
-            rules: new Collection(data.rules).chunk(10).all()
-        }
-    }
-}
+    data: () => ({
+        rules: new Collection(data.rules).chunk(10).all()
+    })
+};
 </script>

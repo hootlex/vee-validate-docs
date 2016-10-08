@@ -113,5 +113,5 @@ export default {
         CouponExample,
         RadioButtonsExample
     }
-}
+};
 </script>

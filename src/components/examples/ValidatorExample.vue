@@ -81,15 +81,14 @@
 
 <script>
 import { Validator } from 'vee-validate';
+
 export default {
     validator: null,
-    data() {
-        return {
-            email: '',
-            name: '',
-            errors: []
-        }
-    },
+    data: () => ({
+        email: '',
+        name: '',
+        errors: []
+    }),
     watch: {
         email(value) {
             this.validator.validate('email', value);
@@ -116,5 +115,5 @@ export default {
         });
         this.$set(this, 'errors', this.validator.errorBag);
     }
-}
+};
 </script>

@@ -106,7 +106,7 @@
 </template>
 
 <script>
- export default {
+export default {
     methods: {
         validateForm(scope) {
             this.$validator.validateAll(scope);
@@ -114,8 +114,9 @@
                 return;
             }
 
+            // eslint-disable-next-line
             alert('Form Submitted!');
         }
     }
- }
+};
 </script>

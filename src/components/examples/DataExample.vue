@@ -48,11 +48,9 @@
 
 <script>
 export default {
-    data() {
-        return {
-            email: '',
-            name: ''
-        }
-    }
-}
+    data: () => ({
+        email: '',
+        name: ''
+    })
+};
 </script>
