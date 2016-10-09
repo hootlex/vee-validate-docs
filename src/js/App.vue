@@ -77,8 +77,8 @@
                 </ul>
             </aside>
         </div>
-        <div class="column columns is-mobile">
-            <div class="column is-11">
+        <div class="column columns is-mobile main-container">
+            <div class="column is-12">
                 <section class="hero">
                     <div class="hero-body">
                         <div class="container has-text-centered">
