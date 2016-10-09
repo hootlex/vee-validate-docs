@@ -1,11 +1,13 @@
 import 'bulma/css/bulma.css';
 import 'highlight.js/styles/github-gist.css';
+import 'font-awesome/css/font-awesome.css';
 import Vue from 'vue';
 import moment from 'moment';
 import VueRouter from 'vue-router';
 import VeeValidate, { Validator } from 'vee-validate';
 import CodeExample from './components/CodeExample.vue';
 import CodeBlock from './components/CodeBlock.vue';
+import Note from './components/Note.vue';
 import App from './App.vue';
 import routerConfig from './routerConfig';
 import '../stylus/app.styl';
@@ -15,6 +17,7 @@ Vue.use(VeeValidate);
 Vue.use(VueRouter);
 Vue.component('code-example', CodeExample);
 Vue.component('code-block', CodeBlock);
+Vue.component('note', Note);
 
 const router = new VueRouter(routerConfig);
 

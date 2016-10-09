@@ -1,23 +1,23 @@
 <template>
-    <div class="columns is-multiline">
+    <div class="columns is-multiline code-example">
         <div class="column is-12">
             <div class="tabs is-left">
                 <ul>
                     <li :class="{ 'is-active': content === 'demo'}">
                         <a @click="content = 'demo'" class="pure-menu-link">
-                            <i class="icon-play"></i>
+                            <span class="icon is-small"><i class="fa fa-play"></i></span>
                             Demo
                         </a>
                     </li>
                     <li :class="{ 'is-active': content === 'html' }">
                         <a @click="content = 'html'" class="pure-menu-link">
-                            <i class="icon-html5"></i>
+                            <span class="icon is-small"><i class="fa fa-html5"></i></span>
                             HTML
                         </a>
                     </li>
                     <li :class="{ 'is-active': content === 'js' }">
                         <a @click="content = 'js'" class="pure-menu-link">
-                            <i class="icon-code"></i>
+                            <span class="icon is-small"><i class="fa fa-code"></i></span>
                             JavaScript
                         </a>
                     </li>

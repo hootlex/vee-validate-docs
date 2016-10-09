@@ -21,9 +21,9 @@
             <code-block class="language-bash">npm install vee-validate --save</code-block>
             <b>Vue 2.x</b>
             <code-block class="language-bash">npm install vee-validate@next --save</code-block>
-            <div class="note">
-                <b>Note:</b> The latest version of this plugin will keep pointing to the Vue 1.x version, until Vue 2.0 is released which is soon, then the latest will point to Vue 2.0 while another tag will be used for the Vue 1.x versions.
-            </div>
+            <note title="note">
+                The latest version of this plugin will keep pointing to the Vue 1.x version, until Vue 2.0 is released which is soon, then the latest will point to Vue 2.0 while another tag will be used for the Vue 1.x versions.
+            </note>
             <h2 id="bower" class="title is-4"><a href="#bower">bower</a></h2>
             <b>Vue 1.x</b>
             <code-block class="language-bash">bower install vee-validate#1.0.0-beta.5 --save</code-block>
@@ -61,16 +61,16 @@
         <basic-example></basic-example>
         <div class="flex-center"><router-link class="link" :to="{ name: 'examples' }">More Examples</router-link></div>
         <br>
-        <div class="note">
-            <b>Note:</b> The field name that appears in the error messages is usually the input's <code>name</code> attribute, unless you passed a value from the vue instance <code>$data</code> object,
+        <note title="Note">
+            The field name that appears in the error messages is usually the input's <code>name</code> attribute, unless you passed a value from the vue instance <code>$data</code> object,
             The name will be then the expression name, check the <router-link :to="{ name: 'examples', hash: '#validate-data-example' }">data validation example</router-link>.
-        </div>
+        </note>
         <h2 id="render-errors" class="title is-4"><a href="#render-errors">Rendering Errors</a></h2>
         <p>
             Naturally, you would want to display the errors to your users. The plugin augments your Vue instance with a private validator object and a public errors data object.
             You are responsible for how the errors should be rendered.
             <br><br>The errors object exposes a simple methods to help you render errors:
-            <ul>
+            <ul class="list-circle">
                 <li><code class="inline">first('field')</code> Fetches the first error message associated with that field.</li>
                 <li><code class="inline">collect('field')</code> Fetches all error messages associated with that field. alternativly you can pass nothing and it will return errors grouped by fields</li>
                 <li><code class="inline">has('field')</code> Checks if there are any errors associated with that field.</li>
@@ -108,7 +108,7 @@
 
             Vue.use(VeeValidate, config);
         </code-block>
-        <ul>
+        <ul class="list-circle">
             <li><code class="inline">errorBagName:</code> The name of the ErrorBag object that will be injected in each of Vue's instances' data.</li>
             <li><code class="inline">delay:</code> The default debounce time for all inputs (only affects validations).</li>
             <li><code class="inline">locale:</code> The default language for the validation messages.</li>

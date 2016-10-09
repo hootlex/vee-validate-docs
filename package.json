@@ -41,6 +41,7 @@
   "dependencies": {
     "bulma": "^0.2.1",
     "collectionsjs": "^0.3.2",
+    "font-awesome": "^4.6.3",
     "highlight.js": "^9.7.0",
     "json-loader": "^0.5.4",
     "moment": "^2.14.1",
