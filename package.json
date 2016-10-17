@@ -2,6 +2,7 @@
   "name": "docs",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "main": "main.js",
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
