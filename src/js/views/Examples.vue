@@ -89,6 +89,28 @@
             In the following example, the third value is not included using the rule <code class="inline">in:1,2</code>
          </p>
          <radio-buttons-example></radio-buttons-example>
+         <h2 id="checkbox-example" class="title is-4"><a href="#checkbox-example">Checkboxes</a></h2>
+         <p>
+            vee-validate also supports validating checkboxes, however like radio buttons the extend of the support is limited
+            by the input nature itself, but all rules work regardless. like the radio buttons you only have attach the validator directive and attributes on the checkbox under validation
+            if there are multiple checkboxes (group) you only have to add the directive on one of them.
+            <br>
+            If multiple values are selected, the validator will apply the validations on each checkbox.
+            <br><br>
+            In the following example, the most basic use of checkboxes validation is the terms and conditions agreement that nobody reads.
+         </p>
+         <checkbox-example></checkbox-example>
+         <h2 id="flags-example" class="title is-4"><a href="#flags-example">Flags</a></h2>
+         <p>
+            vee-validate includes few flags that could help you improve your user experience, each field under validation has its own set of flags which are:
+            <ul class="list-circle">
+                <li>dirty: indicates that the field has been touched.</li>
+                <li>valid: indicates that the field is valid.</li>
+                <li>validated: indicates that the field has been validated at least once.</li>
+            </ul>
+            Here is an example that uses those flags, the button is disabled unless one of the fields is dirty.
+         </p>
+         <flags-example></flags-example>
     </div>
 </template>
 
@@ -101,6 +123,8 @@ import DataExample from './../components/examples/DataExample.vue';
 import EventExample from './../components/examples/EventExample.vue';
 import CouponExample from './../components/examples/CouponExample.vue';
 import RadioButtonsExample from './../components/examples/RadioButtonsExample.vue';
+import CheckboxExample from './../components/examples/CheckboxExample.vue';
+import FlagsExample from './../components/examples/FlagsExample.vue';
 
 export default {
     components: {
@@ -111,7 +135,9 @@ export default {
         DataExample,
         EventExample,
         CouponExample,
-        RadioButtonsExample
+        RadioButtonsExample,
+        CheckboxExample,
+        FlagsExample
     }
 };
 </script>
