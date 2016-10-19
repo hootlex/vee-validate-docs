@@ -1,57 +1,85 @@
 <template>
     <code-example>
-        <form slot="example" @submit="validateBeforeSubmit" class="pure-form pure-form-stacked">
-            <div class="pure-u-1">
-                <label :class="{'error': errors.has('email') }" for="email">Email</label>
-                <input v-model="email" v-validate.initial="email" data-rules="required|email" :class="{'pure-input-1': true, 'has-error': errors.has('email') }" type="text" placeholder="Email">
-                <span class="error" v-show="errors.has('email')">{{ errors.first('email') }}</span>
+        <form slot="example" @submit="validateBeforeSubmit">
+            <div class="column is-12">
+                <label class="label">Email</label>
+                <p class="control has-icon has-icon-right">
+                    <input v-model="email" v-validate.initial="email" data-rules="required|email" :class="{'input': true, 'is-danger': errors.has('email') }" type="text" placeholder="Email">
+                    <i v-show="errors.has('email')" class="fa fa-warning"></i>
+                    <span v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</span>
+                </p>
             </div>
-            <div class="pure-u-1">
-                <label :class="{'error': errors.has('name') }" for="name">Name</label>
-                <input v-model="name" v-validate.initial="name" data-rules="required|alpha|min:3" :class="{'pure-input-1': true, 'has-error': errors.has('name') }" type="text" placeholder="Name">
-                <span class="error" v-show="errors.has('name')">{{ errors.first('name') }}</span>
+            <div class="column is-12">
+                <label class="label">Name</label>
+                <p class="control has-icon has-icon-right">
+                    <input v-model="name" v-validate.initial="name" data-rules="required|alpha" :class="{'input': true, 'is-danger': errors.has('name') }" type="text" placeholder="Email">
+                    <i v-show="errors.has('name')" class="fa fa-warning"></i>
+                    <span v-show="errors.has('name')" class="help is-danger">{{ errors.first('name') }}</span>
+                </p>
             </div>
-            <div class="pure-u-1">
-                <label :class="{'error': errors.has('phone') }" for="phone">Phone Number</label>
-                <input v-model="phone" v-validate.initial="phone" data-rules="required|numeric" :class="{'pure-input-1': true, 'has-error': errors.has('phone') }" type="text" placeholder="Phone">
-                <span class="error" v-show="errors.has('phone')">{{ errors.first('phone') }}</span>
+            <div class="column is-12">
+                <label class="label">Phone</label>
+                <p class="control has-icon has-icon-right">
+                    <input v-model="phone" v-validate.initial="phone" data-rules="required|numeric" :class="{'input': true, 'is-danger': errors.has('phone') }" type="text" placeholder="Phone">
+                    <i v-show="errors.has('phone')" class="fa fa-warning"></i>
+                    <span v-show="errors.has('phone')" class="help is-danger">{{ errors.first('phone') }}</span>
+                </p>
             </div>
-            <div class="pure-u-1">
-                <label :class="{'error': errors.has('url') }" for="url">Website</label>
-                <input v-model="url" v-validate.initial="url" data-rules="required|url" :class="{'pure-input-1': true, 'has-error': errors.has('url') }" type="text" placeholder="Website">
-                <span class="error" v-show="errors.has('url')">{{ errors.first('url') }}</span>
+            <div class="column is-12">
+                <label class="label">Website</label>
+                <p class="control has-icon has-icon-right">
+                    <input v-model="url" v-validate.initial="url" data-rules="required|url" :class="{'input': true, 'is-danger': errors.has('url') }" type="text" placeholder="Website">
+                    <i v-show="errors.has('url')" class="fa fa-warning"></i>
+                    <span v-show="errors.has('url')" class="help is-danger">{{ errors.first('url') }}</span>
+                </p>
             </div>
 
-            <input class="pure-button pure-button-primary" type="submit">
+            <div class="column is-12">
+                <p class="control">
+                    <button class="button is-primary" type="submit">Submit</button>
+                </p>
+            </div>
         </form>
 
         <div slot="code-html">
-            &lt;div id=&quot;app&quot;&gt;
-                &lt;form @submit=&quot;validateBeforeSubmit&quot; class=&quot;pure-form pure-form-stacked&quot;&gt;
-                    &lt;div class=&quot;pure-u-1&quot;&gt;
-                        &lt;label :class=&quot;{'error': errors.has('email') }&quot; for=&quot;email&quot;&gt;Email&lt;/label&gt;
-                        &lt;input v-model=&quot;email&quot; v-validate.initial=&quot;email&quot; data-rules=&quot;required|email&quot; :class=&quot;{'pure-input-1': true, 'has-error': errors.has('email') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
-                        &lt;span class=&quot;error&quot; v-show=&quot;errors.has('email')&quot;&gt;{{ "{" + "{ errors.first('email') }" + "}" }}&lt;/span&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;pure-u-1&quot;&gt;
-                        &lt;label :class=&quot;{'error': errors.has('name') }&quot; for=&quot;name&quot;&gt;Name&lt;/label&gt;
-                        &lt;input v-model=&quot;name&quot; v-validate.initial=&quot;name&quot; data-rules=&quot;required|alpha|min:3&quot; :class=&quot;{'pure-input-1': true, 'has-error': errors.has('name') }&quot; type=&quot;text&quot; placeholder=&quot;Full Name&quot;&gt;
-                        &lt;span class=&quot;error&quot; v-show=&quot;errors.has('name')&quot;&gt;{{ "{" + "{ errors.first('name') }" + "}" }}&lt;/span&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;pure-u-1&quot;&gt;
-                        &lt;label :class=&quot;{'error': errors.has('phone') }&quot; for=&quot;phone&quot;&gt;Phone Number&lt;/label&gt;
-                        &lt;input v-model=&quot;phone&quot; v-validate.initial=&quot;phone&quot; data-rules=&quot;required|numeric&quot; :class=&quot;{'pure-input-1': true, 'has-error': errors.has('phone') }&quot; type=&quot;text&quot; placeholder=&quot;Phone&quot;&gt;
-                        &lt;span class=&quot;error&quot; v-show=&quot;errors.has('phone')&quot;&gt;{{ "{" + "{ errors.first('phone') }" + "}" }}&lt;/span&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;pure-u-1&quot;&gt;
-                        &lt;label :class=&quot;{'error': errors.has('url') }&quot; for=&quot;url&quot;&gt;Website&lt;/label&gt;
-                        &lt;input v-model=&quot;url&quot; v-validate.initial=&quot;url&quot; data-rules=&quot;required|url&quot; :class=&quot;{'pure-input-1': true, 'has-error': errors.has('url') }&quot; type=&quot;text&quot; placeholder=&quot;Website&quot;&gt;
-                        &lt;span class=&quot;error&quot; v-show=&quot;errors.has('url')&quot;&gt;{{ "{" + "{ errors.first('url') }" + "}" }}&lt;/span&gt;
-                    &lt;/div&gt;
+            &lt;form  @submit=&quot;validateBeforeSubmit&quot;&gt;
+                &lt;div class=&quot;column is-12&quot;&gt;
+                    &lt;label class=&quot;label&quot;&gt;Email&lt;/label&gt;
+                    &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
+                        &lt;input v-model=&quot;email&quot; v-validate.initial=&quot;email&quot; data-rules=&quot;required|email&quot; :class=&quot;{'input': true, 'is-danger': errors.has('email') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
+                        &lt;i v-show=&quot;errors.has('email')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
+                        &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ "{" + "{ errors.first('email') }" + "}" }}&lt;/span&gt;
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;column is-12&quot;&gt;
+                    &lt;label class=&quot;label&quot;&gt;Name&lt;/label&gt;
+                    &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
+                        &lt;input v-model=&quot;name&quot; v-validate.initial=&quot;name&quot; data-rules=&quot;required|alpha&quot; :class=&quot;{'input': true, 'is-danger': errors.has('name') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
+                        &lt;i v-show=&quot;errors.has('name')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
+                        &lt;span v-show=&quot;errors.has('name')&quot; class=&quot;help is-danger&quot;&gt;{{ "{" + "{ errors.first('name') }" + "}" }}&lt;/span&gt;
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;column is-12&quot;&gt;
+                    &lt;label class=&quot;label&quot;&gt;Phone&lt;/label&gt;
+                    &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
+                        &lt;input v-model=&quot;phone&quot; v-validate.initial=&quot;phone&quot; data-rules=&quot;required|numeric&quot; :class=&quot;{'input': true, 'is-danger': errors.has('phone') }&quot; type=&quot;text&quot; placeholder=&quot;Phone&quot;&gt;
+                        &lt;i v-show=&quot;errors.has('phone')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
+                        &lt;span v-show=&quot;errors.has('phone')&quot; class=&quot;help is-danger&quot;&gt;{{ "{" + "{ errors.first('phone') }" + "}" }}&lt;/span&gt;
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;column is-12&quot;&gt;
+                    &lt;label class=&quot;label&quot;&gt;Website&lt;/label&gt;
+                    &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
+                        &lt;input v-model=&quot;url&quot; v-validate.initial=&quot;url&quot; data-rules=&quot;required|url&quot; :class=&quot;{'input': true, 'is-danger': errors.has('url') }&quot; type=&quot;text&quot; placeholder=&quot;Website&quot;&gt;
+                        &lt;i v-show=&quot;errors.has('url')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
+                        &lt;span v-show=&quot;errors.has('url')&quot; class=&quot;help is-danger&quot;&gt;{{ "{" + "{ errors.first('url') }" + "}" }}&lt;/span&gt;
+                    &lt;/p&gt;
+                &lt;/div&gt;
 
-                    &lt;input class=&quot;pure-button pure-button-primary&quot; type=&quot;submit&quot;&gt;
-                &lt;/form&gt;
-            &lt;/div&gt;
+                &lt;p class=&quot;control&quot;&gt;
+                    &lt;button class=&quot;button is-primary&quot; type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
         </div>
 
         <div slot="code-js">

@@ -7,23 +7,37 @@
                 </p>
             </div>
             <div>
-                <input name="terms" v-validate data-rules="required" type="checkbox"> I agree to the terms and conditions.
-                <span class="error" v-show="errors.has('terms')">{{ errors.first('terms') }}</span>
+                <p class="control">
+                    <label class="checkbox">
+                        <input name="terms" v-validate data-rules="required" type="checkbox">
+                        I agree to the terms and conditions.
+                    </label>
+                    <span class="help is-danger" v-show="errors.has('terms')">{{ errors.first('terms') }}</span>
+                </p>
             </div>
-            <button type="button" class="button" @click="nextStep">Next</button>
+            <p class="control">
+                <button type="button" class="button is-primary" @click="nextStep">Next</button>
+            </p>
         </div>
         <div slot="code-html">
-            &lt;div&gt;
+            &lt;div &gt;
                 &lt;div class=&quot;terms&quot;&gt;
                     &lt;p&gt;
                         {{ terms }}
                     &lt;/p&gt;
                 &lt;/div&gt;
                 &lt;div&gt;
-                    &lt;input name=&quot;terms&quot; v-validate data-rules=&quot;required&quot; type=&quot;checkbox&quot;&gt; I agree to the terms and conditions.
-                    &lt;span class=&quot;error&quot; v-show=&quot;errors.has('terms')&quot;&gt;{{ errors.first('terms') }}&lt;/span&gt;
+                    &lt;p class=&quot;control&quot;&gt;
+                        &lt;label class=&quot;checkbox&quot;&gt;
+                            &lt;input name=&quot;terms&quot; v-validate data-rules=&quot;required&quot; type=&quot;checkbox&quot;&gt;
+                            I agree to the terms and conditions.
+                        &lt;/label&gt;
+                        &lt;span class=&quot;help is-danger&quot; v-show=&quot;errors.has('terms')&quot;&gt;{{ "{" + "{ errors.first('terms') }" + "}" }}&lt;/span&gt;
+                    &lt;/p&gt;
                 &lt;/div&gt;
-                &lt;button type=&quot;button&quot; class=&quot;button&quot; @click=&quot;nextStep&quot;&gt;Next&lt;/button&gt;
+                &lt;p class=&quot;control&quot;&gt;
+                    &lt;button type=&quot;button is-primary&quot; class=&quot;button&quot; @click=&quot;nextStep&quot;&gt;Next&lt;/button&gt;
+                &lt;/p&gt;
             &lt;/div&gt;
         </div>
         <div slot="code-js">

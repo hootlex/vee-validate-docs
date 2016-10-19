@@ -1,35 +1,41 @@
 <template>
     <code-example>
-        <div slot="example">
-            <div>
+        <div slot="example" class="columns is-multiline">
+            <div class="column is-12">
                 <span :class="{ 'discounted': discounted }">Price: {{ price }}$</span>
                 <span v-show="discounted" class="SeemsGood">{{ discountedPrice }}$</span>
             </div>
-            <form @submit.prevent="applyCoupon" class="pure-form pure-form-stacked">
-                <div class="pure-u-1">
-                    <label :class="{'error': errors.has('coupon') }" for="email">Coupon</label>
-                    <input v-model="coupon" :class="{'pure-input-1': true, 'has-error': errors.has('coupon') }" type="text" placeholder="Enter Your Coupon">
-                    <span class="error" v-show="errors.has('coupon')">{{ errors.first('coupon') }}</span>
-                </div>
+            <form @submit.prevent="applyCoupon" class="column is-12">
+                <label class="label">Coupon</label>
+                <p class="control has-icon has-icon-right">
+                    <input v-model="coupon" name="coupon" :class="{'input': true, 'is-danger': errors.has('coupon') }" type="text" placeholder="Enter Your Coupon">
+                    <i v-show="errors.has('coupon')" class="fa fa-warning"></i>
+                    <span v-show="errors.has('coupon')" class="help is-danger">{{ errors.first('coupon') }}</span>
+                </p>
 
-                <button type="submit" class="pure-button pure-button-primary" name="button">Apply</button>
+                <p class="control">
+                    <button type="submit" class="button is-primary" name="button">Apply</button>
+                </p>
             </form>
         </div>
 
         <div slot="code-html">
-            &lt;div&gt;
-                &lt;div&gt;
-                    &lt;span :class=&quot;{ 'discounted': discounted }&quot;&gt;Price: {{ price }}$&lt;/span&gt;
-                    &lt;span v-show=&quot;discounted&quot; class=&quot;SeemsGood&quot;&gt;{{ discountedPrice }}$&lt;/span&gt;
+            &lt;div class=&quot;columns is-multiline&quot;&gt;
+                &lt;div class=&quot;column is-12&quot;&gt;
+                    &lt;span :class=&quot;{ 'discounted': discounted }&quot;&gt;Price: {{ "{" + "{ price }" + "}" }}$&lt;/span&gt;
+                    &lt;span v-show=&quot;discounted&quot; class=&quot;SeemsGood&quot;&gt;{{ "{" + "{ discountedPrice }" + "}" }}$&lt;/span&gt;
                 &lt;/div&gt;
-                &lt;form @submit.prevent=&quot;applyCoupon&quot; class=&quot;pure-form pure-form-stacked&quot;&gt;
-                    &lt;div class=&quot;pure-u-1&quot;&gt;
-                        &lt;label :class=&quot;{'error': errors.has('coupon') }&quot; for=&quot;email&quot;&gt;Coupon&lt;/label&gt;
-                        &lt;input v-model=&quot;coupon&quot; :class=&quot;{'pure-input-1': true, 'has-error': errors.has('coupon') }&quot; type=&quot;text&quot; placeholder=&quot;Enter Your Coupon&quot;&gt;
-                        &lt;span class=&quot;error&quot; v-show=&quot;errors.has('coupon')&quot;&gt;{{ errors.first('coupon') }}&lt;/span&gt;
-                    &lt;/div&gt;
+                &lt;form @submit.prevent=&quot;applyCoupon&quot; class=&quot;column is-12&quot;&gt;
+                    &lt;label class=&quot;label&quot;&gt;Coupon&lt;/label&gt;
+                    &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
+                        &lt;input name=&quot;coupon&quot; :class=&quot;{'input': true, 'is-danger': errors.has('coupon') }&quot; type=&quot;text&quot; placeholder=&quot;Enter Your Coupon&quot;&gt;
+                        &lt;i v-show=&quot;errors.has('coupon')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
+                        &lt;span v-show=&quot;errors.has('coupon')&quot; class=&quot;help is-danger&quot;&gt;{{ "{" + "{ errors.first('coupon') }" + "}" }}&lt;/span&gt;
+                    &lt;/p&gt;
 
-                    &lt;button type=&quot;submit&quot; class=&quot;pure-button pure-button-primary&quot; name=&quot;button&quot;&gt;Apply&lt;/button&gt;
+                    &lt;p class=&quot;control&quot;&gt;
+                        &lt;button type=&quot;submit&quot; class=&quot;button is-primary&quot; name=&quot;button&quot;&gt;Apply&lt;/button&gt;
+                    &lt;/p&gt;
                 &lt;/form&gt;
             &lt;/div&gt;
         </div>

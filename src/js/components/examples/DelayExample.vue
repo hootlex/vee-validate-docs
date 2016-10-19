@@ -1,34 +1,42 @@
 <template>
     <code-example>
-        <form slot="example" class="pure-form pure-form-stacked">
-            <legend>Debounced Form</legend>
-            <div class="pure-u-1">
-                <label :class="{'error': errors.has('email') }" for="email">Email - Delay: 500ms</label>
-                <input v-validate data-rules="required|email" data-delay="500" :class="{'pure-input-1': true, 'has-error': errors.has('email') }" name="email" type="text" placeholder="Email">
-                <span class="error" v-show="errors.has('email')">{{ errors.first('email') }}</span>
+        <div slot="example" class="columns is-multiline">
+            <div class="column is-12">
+                <label class="label">Email (1s delay)</label>
+                <p class="control has-icon has-icon-right">
+                    <input name="email" v-validate data-rules="required|email" data-delay="1000" :class="{'input': true, 'is-danger': errors.has('email') }" type="text" placeholder="Email">
+                    <i v-show="errors.has('email')" class="fa fa-warning"></i>
+                    <span v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</span>
+                </p>
             </div>
-            <div class="pure-u-1">
-                <label :class="{'error': errors.has('name') }" for="name">Name - Delay: 1s</label>
-                <input v-validate data-rules="required|alpha|min:3" data-delay="1000" :class="{'pure-input-1': true, 'has-error': errors.has('name') }" name="name" type="text" placeholder="Full Name">
-                <span class="error" v-show="errors.has('name')">{{ errors.first('name') }}</span>
+            <div class="column is-12">
+                <label class="label">Name (0.5s delay)</label>
+                <p class="control has-icon has-icon-right">
+                    <input name="name" v-validate data-rules="required|alpha" data-delay="500" :class="{'input': true, 'is-danger': errors.has('name') }" type="text" placeholder="Name">
+                    <i v-show="errors.has('name')" class="fa fa-warning"></i>
+                    <span v-show="errors.has('name')" class="help is-danger">{{ errors.first('name') }}</span>
+                </p>
             </div>
-        </form>
+        </div>
 
         <div slot="code-html">
-            &lt;div id=&quot;app&quot;&gt;
-                &lt;form class=&quot;pure-form pure-form-stacked&quot;&gt;
-                    &lt;legend&gt;Basic Form&lt;/legend&gt;
-                    &lt;div class=&quot;pure-u-1&quot;&gt;
-                        &lt;label :class=&quot;{'error': errors.has('email') }&quot; for=&quot;email&quot;&gt;Email - Delay: 500ms&lt;/label&gt;
-                        &lt;input v-validate data-rules=&quot;required|email&quot; data-delay=&quot;500&quot; :class=&quot;{'pure-input-1': true, 'has-error': errors.has('email') }&quot; name=&quot;email&quot; type=&quot;email&quot; placeholder=&quot;Email&quot;&gt;
-                        &lt;span class=&quot;error&quot; v-show=&quot;errors.has('email')&quot;&gt;{{ "{" + "{ errors.first('email') }" + "}" }}&lt;/span&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;pure-u-1&quot;&gt;
-                        &lt;label :class=&quot;{'error': errors.has('name') }&quot; for=&quot;name&quot;&gt;Name - Delay: 1s&lt;/label&gt;
-                        &lt;input v-validate data-rules=&quot;required|alpha|min:3&quot; data-delay=&quot;1000&quot; :class=&quot;{'pure-input-1': true, 'has-error': errors.has('name') }&quot; name=&quot;name&quot; type=&quot;text&quot; placeholder=&quot;Full Name&quot;&gt;
-                        &lt;span class=&quot;error&quot; v-show=&quot;errors.has('name')&quot;&gt;{{ "{" + "{ errors.first('name') }" + "}" }}&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/form&gt;
+            &lt;div class=&quot;columns&quot;&gt;
+                &lt;div class=&quot;column is-12&quot;&gt;
+                    &lt;label class=&quot;label&quot;&gt;Email&lt;/label&gt;
+                    &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
+                        &lt;input v-model=&quot;email&quot; v-validate data-rules=&quot;required|email&quot; :class=&quot;{'input': true, 'is-danger': errors.has('email') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
+                        &lt;i v-show=&quot;errors.has('email')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
+                        &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ "{" + "{ errors.first('email') }" + "}" }}&lt;/span&gt;
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;column is-12&quot;&gt;
+                    &lt;label class=&quot;label&quot;&gt;Name&lt;/label&gt;
+                    &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
+                        &lt;input v-model=&quot;name&quot; v-validate data-rules=&quot;required|alpha&quot; :class=&quot;{'input': true, 'is-danger': errors.has('name') }&quot; type=&quot;text&quot; placeholder=&quot;Name&quot;&gt;
+                        &lt;i v-show=&quot;errors.has('name')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
+                        &lt;span v-show=&quot;errors.has('name')&quot; class=&quot;help is-danger&quot;&gt;{{ "{" + "{ errors.first('name') }" + "}" }}&lt;/span&gt;
+                    &lt;/p&gt;
+                &lt;/div&gt;
             &lt;/div&gt;
         </div>
 
