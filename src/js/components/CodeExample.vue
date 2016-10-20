@@ -38,6 +38,7 @@
 
 <script>
 export default {
+    name: 'code-example',
     data: () => ({
         content: 'demo'
     })

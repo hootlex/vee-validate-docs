@@ -6,6 +6,7 @@
 import hljs from 'highlight.js';
 
 export default {
+    name: 'code-block',
     methods: {
         removeWhitespace() {
             const el = this.$refs.code;

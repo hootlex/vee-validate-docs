@@ -7,6 +7,7 @@
         </button>
         <div :class="{ 'column': true, 'is-3': true, 'sidebar-container': true, 'is-open': sidebarToggle }">
             <aside class="menu sidebar">
+                <a class="github-button" href="https://github.com/logaretm/vee-validate" data-icon="octicon-star" data-style="mega" data-count-href="/logaretm/vee-validate/stargazers" data-count-api="/repos/logaretm/vee-validate#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star logaretm/vee-validate on GitHub">Star</a>
                 <p class="menu-label">
                     Getting Started
                 </p>

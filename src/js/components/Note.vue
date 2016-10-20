@@ -6,6 +6,7 @@
 
 <script>
 export default {
+    name: 'note',
     props: {
         title: {
             type: String,
