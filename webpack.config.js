@@ -2,6 +2,7 @@ const path = require('path');
 const merge = require('webpack-merge');
 const poststylus = require('poststylus');
 const webpack = require('webpack');
+const pages = require('./webpack.config.pages.js');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -72,6 +73,11 @@ let config = {
                 test: /.json$/,
                 exclude: /node_modules/,
                 loader: 'json-loader'
+            },
+            {
+                test: /.hbs$/,
+                exclude: /node_modules/,
+                loader: 'handlebars'
             }
         ]
     }
@@ -82,4 +88,4 @@ config = merge(
     isProduction ? require('./webpack.config.prod.js') : require('./webpack.config.dev.js')
 );
 
-module.exports = config;
+module.exports = merge(config, pages);
