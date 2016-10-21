@@ -24,10 +24,10 @@
 
             <h2 id="bower" class="title is-4"><a href="#bower">bower</a></h2>
             <b>Vue 1.x</b>
-            <code-block class="language-bash">bower install vee-validate#1.0.0-beta.5 --save</code-block>
+            <code-block class="language-bash">bower install vee-validate#1.0.0-beta.8 --save</code-block>
             <b>Vue 2.x</b>
-            <code-block class="language-bash">bower install vee-validate#2.0.0-beta.10 --save</code-block>
-            
+            <code-block class="language-bash">bower install vee-validate#2.0.0-beta.13 --save</code-block>
+
             <h2 id="cdn" class="title is-4"><a href="#cdn">CDN</a></h2>
             Head over to <a href="https://www.jsdelivr.com/projects/vee-validate" target="jsdelivr">jsdelivr</a> and grab the latest version.
 

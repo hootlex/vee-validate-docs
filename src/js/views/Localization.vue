@@ -73,7 +73,7 @@
             If you can't find your locale, you could help this plugin by contributing a localized version to the <a href="https://github.com/logaretm/vee-validate" class="link" target="github">repo</a>. I will happily accept it.
         </p>
         <b class="important">Available Locales:</b>
-        <ul>
+        <ul class="list-circle">
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/en.js" target="github">English</a></li>
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/ar.js" target="github">Arabic</a></li>
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/es.js" target="github">Spanish</a> by <a class="link" href="https://github.com/ClaudioEyzaguirre" target="github">@ClaudioEyzaguirre</a></li>
@@ -82,6 +82,9 @@
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/de.js" target="github">German</a> by <a class="link" href="https://github.com/kayschima" target="github">@kayschima</a></li>
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/fr.js" target="github">French</a> by <a class="link" href="https://github.com/thierrymichel" target="github">@thierrymichel</a></li>
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/vi.js" target="github">Vietnamese</a> by <a class="link" href="https://github.com/imcvampire" target="github">@imcvampire</a></li>
+            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/it.js" target="github">Italian</a> by <a class="link" href="https://github.com/ionut-tanasa" target="github">@ionut-tanasa</a></li>
+            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/nl.js" target="github">Dutch</a> by <a class="link" href="https://github.com/Woutje99" target="github">@Woutje99</a></li>
+            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/el.js" target="github">Greek</a> by <a class="link" href="https://github.com/rousos87" target="github">@rousos87</a></li>
         </ul>
     </div>
 </template>
