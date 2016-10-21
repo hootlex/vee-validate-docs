@@ -55,11 +55,11 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input name="after_field_target" :class="{'input': true, 'is-danger': errors.has('after_field') }" type="text" placeholder="DD/MM/YYYY">
-                    </p>
-                    <p class="control">
                         <input v-validate data-rules="date_format:DD/MM/YYYY|after:after_field_target" :class="{'input': true, 'is-danger': errors.has('after_field') }" name="after_field" type="text" placeholder="DD/MM/YYYY">
                         <span v-show="errors.has('after_field')" class="help is-danger">{{ errors.first('after_field') }}</span>
+                    </p>
+                    <p class="control">
+                        <input name="after_field_target" :class="{'input': true, 'is-danger': errors.has('after_field') }" type="text" placeholder="DD/MM/YYYY">
                     </p>
                 </div>
             </div>
