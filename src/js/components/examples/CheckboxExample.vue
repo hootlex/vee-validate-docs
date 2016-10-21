@@ -20,7 +20,7 @@
             </p>
         </div>
         <div slot="code-html">
-            &lt;div &gt;
+            &lt;div&gt;
                 &lt;div class=&quot;terms&quot;&gt;
                     &lt;p&gt;
                         {{ terms }}

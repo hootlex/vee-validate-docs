@@ -55,6 +55,8 @@
             <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#scope-example'}">Validation Scopes</router-link></li>
             <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#coupon-example'}">Custom Validation: Coupon</router-link></li>
             <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#radio-buttons-example'}">Radio Buttons Validation</router-link></li>
+            <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#checkbox-example'}">Checkbox Example</router-link></li>
+            <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#flags-example'}">Validation Flags</router-link></li>
         </ul>
         <p class="menu-label">
             API

@@ -86,7 +86,7 @@
             In the following example, the third value is not included using the rule <code class="inline">in:1,2</code>
          </p>
          <radio-buttons-example></radio-buttons-example>
-         <h2 id="checkbox-example" class="title is-4"><a href="#checkbox-example">Checkboxes</a></h2>
+         <h2 id="checkbox-example" class="title is-4"><a href="#checkbox-example">Checkbox Example</a></h2>
          <p>
             vee-validate also supports validating checkboxes, however like radio buttons the extend of the support is limited
             by the input nature itself, but all rules work regardless. like the radio buttons you only have attach the validator directive and attributes on the checkbox under validation
