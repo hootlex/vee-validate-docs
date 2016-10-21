@@ -59,9 +59,9 @@
                 validator.validate('email', 'foo@bar.com'); // true
                 validator.validate('email', 'foo@bar'); // false
             </code-block>
-            <div class="note">
-                <b>Note:</b> Most validators return a Boolean, however some validators (very few) return a <code>Promise</code> The validator is aware of this and will only return a Promise if at least one validation yields a promise. the promise is resolved to boolean which you can later chain to check your fields.
-            </div>
+            <note>
+                Most validators return a Boolean, however some validators (very few) return a <code>Promise</code> The validator is aware of this and will only return a Promise if at least one validation yields a promise. the promise is resolved to boolean which you can later chain to check your fields.
+            </note>
             <br>
             You can validate multiple values at the same time using <code class="inline">validateAll(obj)</code>:
             <code-block class="language-javascript">
@@ -82,10 +82,10 @@
             <code-block class="language-javascript">
                 validator.setLocale('ar');
             </code-block>
-            <div class="note">
-                <b>Note:</b> Each validator keeps track of its own locale. so be sure to update any instances whenever the language changes.
+            <note>
+                Each validator keeps track of its own locale. so be sure to update any instances whenever the language changes.
                 For more information about how to overwrite messages and add new ones, please refer to the <router-link :to="{ name: 'rules', hash: 'custom-messages' }" class="link">custom messages</router-link> section.
-            </div>
+            </note>
             The Validator class has a static method called <code class="inline">setDefaultLocale(string)</code> which sets the default language for all newly instantiated validators to that language.
             <code-block class="language-javascript">
                 import { Validator } from 'vee-validate';

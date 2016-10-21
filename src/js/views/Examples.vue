@@ -10,9 +10,9 @@
         <p>
             After validating a file, you may want to reject the uploaded file if it fails the validation, this can be done by adding
             the <code class="inline">reject</code> modifier to directive. so you would use it like this: <code class="inline">v-validate.reject</code>.
-            <div class="note">
-                <b>Note: </b> The <code>reject</code> modifier is only relevant on file inputs, adding it to other input types will not have an effect.
-            </div>
+            <note>
+                The <code>reject</code> modifier is only relevant on file inputs, adding it to other input types will not have an effect.
+            </note>
         </p>
         <reject-example></reject-example>
         <h2 id="validate-data-example" class="title is-4"><a href="#validate-data-example">Validate $data</a></h2>
@@ -25,22 +25,21 @@
                 &lt;input v-validate=&quot;email&quot; data-rules=&quot;required|email&quot; type=&quot;text&quot; name=&quot;email&quot;&gt;
             </code-block>
             Whenever the binding value is updated, the validator will validate the new value automatically.
-            <div class="note">
-                <b>Note:</b> The plugin will use the data in your vue instance as the source of the input value, meaning it won't be watching the input anymore.
+            <note>
+                The plugin will use the data in your vue instance as the source of the input value, meaning it won't be watching the input anymore.
                 And as you noticed, you don't need to provide a <code>name</code> attribute, as the expression name will be used instead.
-            </div>
+            </note>
          </p>
          <data-example></data-example>
          <p>
-            <div class="note">
-                <b>Note:</b> Notice that the <code>email</code> field was immediatly validated when you open the page, you may not want this behavior, use the <code>initial</code> modifier to tell the validator to ignore the first evaluation like this: <code>v-validate.initial</code>.
+            <note>
+                Notice that the <code>email</code> field was immediatly validated when you open the page, you may not want this behavior, use the <code>initial</code> modifier to tell the validator to ignore the first evaluation like this: <code>v-validate.initial</code>.
                 <br>For example the name field above didn't display any errors when you opened this page.
                 This attribute is only relevant when validating using binding expressions, it has no effect otherwise.
-            </div>
-            <br>
-            <div class="note">
-                <b>Note:</b> When you provide a binding expression to the directive, <code>delay</code> attribute and <code>reject</code> modifier won't have an effect anymore. so you might want to handle debouncing the inputs yourself.
-            </div>
+            </note>
+            <note>
+                When you provide a binding expression to the directive, <code>delay</code> attribute and <code>reject</code> modifier won't have an effect anymore. so you might want to handle debouncing the inputs yourself.
+            </note>
          </p>
          <h2 id="validate-form" class="title is-4"><a href="#validate-form">Validate Form Before Submit</a></h2>
          <p>
@@ -52,12 +51,10 @@
             You may want to display error messages in different languages, here is an example on how you may do that. The language below is Arabic (RTL):
          </p>
          <locale-example></locale-example>
-         <p>
-            <div class="note">
-                <b>Note: </b> Here we are also seeing <code>data-as</code> attribute which tells the validator to use that value as the field name when generating error messages, this is a good way to display 'pretty names' for your inputs in error messages, which would make sense when displaying messages in other languages.
-                <br><br>Keep in mind that those pretty names are only used when generating error messages.
-            </div>
-         </p>
+         <note>
+             <b>Note: </b> Here we are also seeing <code>data-as</code> attribute which tells the validator to use that value as the field name when generating error messages, this is a good way to display 'pretty names' for your inputs in error messages, which would make sense when displaying messages in other languages.
+             <br><br>Keep in mind that those pretty names are only used when generating error messages.
+         </note>
          <h2 id="scope-example" class="title is-4"><a href="#scope-example">Scopes</a></h2>
          <p>
             By default the scope of the validator is the same as the Vue instance that owns it, sometimes you may have multiple fields with the same name, they are in different forms and serve different purposes.

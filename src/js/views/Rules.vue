@@ -12,11 +12,11 @@
             <code-block class="language-javascript">
                 var someRule = 'in:1,2,3,4';
             </code-block>
-            <div class="note">
-                <b>Note:</b> The validators (rules) and their parameters are statically saved, in order to update some validation rule, you have to attach it again with the new parameters and it will be overwritten.
-            </div>
+            <note>
+                The validators (rules) and their parameters are statically saved, in order to update some validation rule, you have to attach it again with the new parameters and it will be overwritten.
+            </note>
         </p>
-        <h2 id="available-rules" class="title is-4"><a href="#available-rules">Available Rules</a></h2>
+        <h2 id="available-validations" class="title is-4"><a href="#available-validations">Available Rules</a></h2>
         <p>
             <code class="inline">vee-validate</code> Comes out of the box with many validation rules, which are:
         </p>
@@ -28,20 +28,19 @@
             </div>
         </div>
         <div class="rules">
-            <div class="note">
-                <b>Note: </b>Date validators always require the <code>date_format</code> rule to be always present and must preceed them in the rules order. The date validators are not enabled by default, they require <a href="http://momentjs.com">momentjs</a> in order to work.
+            <note title="note">
+                Date validators always require the <code>date_format</code> rule to be always present and must preceed them in the rules order. The date validators are not enabled by default, they require <a href="http://momentjs.com">momentjs</a> in order to work.
                 If your setup contains momentjs globally, it will be installed automatically for all validator instances. otherwise you may want to pass the moment reference to <code>installDateTimeValidators(moment)</code> which is available both statically and on instances.
 
                 Also note that the date validators always use the <a href="http://momentjs.com/guides/#/parsing/strict-mode/" class="link">'strict' moment parsing mode</a>.
-            </div>
-            <br>
-            <div class="note">
-                <b>Note: </b>In the rule signature required parameters are enclosed within <code>{}</code> like this: <code>{param}</code>.
+            </note>
+            <note>
+                In the rule signature required parameters are enclosed within <code>{}</code> like this: <code>{param}</code>.
                 <br>
                 Optional parameters have a <code>?</code> at the end: <code>{optional?}</code>.
                 <br>
                 Lists are enclosed withn brackets <code>[]</code>. ex: <code>[list]</code>.
-            </div>
+            </note>
             <div class="rule" id="rule-after">
                 <b class="important">after:{target}</b>
                 <div class="description">
@@ -352,9 +351,9 @@
                         <span v-show="errors.has('mimes_field')" class="help is-danger">{{ errors.first('mimes_field') }}</span>
                     </p>
                 </div>
-                <div class="note">
-                    <b>Note:</b> You can use '*' to specify a wild card, something like <code>mimes:image/*</code> will accept all image types.
-                </div>
+                <note>
+                    You can use '*' to specify a wild card, something like <code>mimes:image/*</code> will accept all image types.
+                </note>
             </div>
             <div class="rule" id="rule-min">
                 <b class="important">min:{length}</b>
@@ -427,9 +426,9 @@
                         <span v-show="errors.has('regex_field')" class="help is-danger">{{ errors.first('regex_field') }}</span>
                     </p>
                 </div>
-                <div class="note">
-                    <b>Note:</b> Currently you should not use the pipe | within your regular expression as it will cause a conflict with how parsing validators work. A workaround is in progress.
-                </div>
+                <note>
+                    You should not use the pipe | within your regular expression in the HTML as it will cause a conflict with how validators parsing work. A workaround is to attach the field programatically and pass the regex there.
+                </note>
             </div>
             <div class="rule" id="rule-required">
                 <b class="important">required</b>
@@ -521,17 +520,16 @@
             This validator form must have a <code class="inline">validate</code> method, and either a <code class="inline">getMessage</code> method, or a <code class="inline">messages</code> object.
             The only difference that the latter will allow you to add localized messages, the former only adds it to the English dictionary.
 
-            <div class="note">
-                <b>Note:</b> Notice how the <code>messages</code> methods gets passed the <code>field</code> which is the name of the field under validation as a first parameter.
+            <note>
+                Notice how the <code>messages</code> methods gets passed the <code>field</code> which is the name of the field under validation as a first parameter.
                 And how the <code>validate</code> method gets passed the value as a first parameter.
                 And both receive the <code>args</code> which are the parameters (arguments) that were configured with the validation rule.
                 for example look at the <a href="https://github.com/logaretm/vee-validate/blob/master/src/rules/min.js">actual implementation of the min rule</a>.
-            </div>
-            <br>
-            <div class="note">
-                <b>Note:</b> As you can see a validation rule must implement one of the three forms discussed above.
+            </note>
+            <note>
+                As you can see a validation rule must implement one of the three forms discussed above.
                  Not doing so will throw a <code>ValidatorException</code> with a suitable error message detailing what were you missing.
-            </div>
+            </note>
         </p>
         <p>
             After creating your validator, You can add it to the list of rules using <code class="inline">extend(name, validator)</code> method in the validator instance.
@@ -551,18 +549,18 @@
                 instance.extend('falsy', (value) =&gt; ! value);
                 instance.attach('falseField', 'falsy');
             </code-block>
-            <div class="note">
-                <b>Note:</b> Using any of the <code>extend</code> either statically or on an instance will extend all validators with the new validation rule.
-                 extending a new rule that have the same name as an existing rule will throw a <code>ValidatorException</code> with an error message.
-            </div>
+            <note>
+                Using any of the <code>extend</code> either statically or on an instance will extend all validators with the new validation rule.
+                extending a new rule that have the same name as an existing rule will throw a <code>ValidatorException</code> with an error message.
+            </note>
         </p>
         <h2 id="custom-messages" class="title is-4"><a href="#custom-messages">Custom Messages</a></h2>
         <p>
             Of course you might need to overwrite the error messages, or add new ones. The Validator class and its instances provide an <code class="inline">updateDictionary</code> method.
             which will merge the messages with the internal dictionary, overwriting any duplicates.
-            <div class="note">
-                <b>Note:</b> Any merges will have an effect on all validator instances as the messages dictionary is shared.
-            </div>
+            <note>
+                Any merges will have an effect on all validator instances as the messages dictionary is shared.
+            </note>
             <code-block class="language-javascript">
                 import { Validator } from 'vee-validate';
 
@@ -587,9 +585,9 @@
             <p>
                 Usually you would stucture your language files for your app rather than adding hardcoded strings like the example above, check the <router-link class="link" :to="{ name: 'localization' }">localization guide</router-link> for a better approach.
             </p>
-            <div class="note">
-                <b>Note:</b> You must provide the messages in an object path like: <code>dictionary.locale.message</code>.
-            </div>
+            <note>
+                You must provide the messages in an object path like: <code>dictionary.locale.message</code>.
+            </note>
         </p>
         <h2 id="custom-attributes" class="title is-4"><a href="#custom-attributes">Custom Attributes</a></h2>
         <p>
@@ -614,9 +612,9 @@
                 Validator.updateDictionary(dictionary);
             </code-block>
 
-            <div class="note">
-                <b>Note: </b> If the attribute is not found for the current locale, it will fallback to the binding expression or the field name. If you use the <router-link :to="{ name: 'localization', hash: '#attributes-data-as' }">data-as</router-link> attribute it will take precedence over the internal dictionary.
-            </div>
+            <note>
+                If the attribute is not found for the current locale, it will fallback to the binding expression or the field name. If you use the <router-link :to="{ name: 'localization', hash: '#attributes-data-as' }">data-as</router-link> attribute it will take precedence over the internal dictionary.
+            </note>
         </p>
     </div>
 </template>

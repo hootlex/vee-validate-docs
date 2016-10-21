@@ -60,12 +60,10 @@
                 }
             });
         </code-block>
-        <p>
-            <div class="note">
-                <b>Note: </b> You can still modify the default language for each validator individually via the <code>setLocale</code> method on the validator instance.
-                And you can also switch the language for all future validators (not created yet) via the <code>setDefaultLocale</code> static method on the Validator class.
-            </div>
-        </p>
+        <note>
+            You can still modify the default language for each validator individually via the <code>setLocale</code> method on the validator instance.
+            And you can also switch the language for all future validators (not created yet) via the <code>setDefaultLocale</code> static method on the Validator class.
+        </note>
         <div>
             A working example can be found <router-link class="link" :to="{ name: 'examples', hash: '#locale-example' }">here</router-link>.
         </div>
