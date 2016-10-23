@@ -85,6 +85,8 @@
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/it.js" target="github">Italian</a> by <a class="link" href="https://github.com/ionut-tanasa" target="github">@ionut-tanasa</a></li>
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/nl.js" target="github">Dutch</a> by <a class="link" href="https://github.com/Woutje99" target="github">@Woutje99</a></li>
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/el.js" target="github">Greek</a> by <a class="link" href="https://github.com/rousos87" target="github">@rousos87</a></li>
+            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/id.js" target="github">Indonesian</a> by <a class="link" href="https://github.com/gunturaf" target="github">@gunturaf</a></li>
+
         </ul>
     </div>
 </template>
