@@ -102,9 +102,28 @@
             vee-validate includes few flags that could help you improve your user experience, each field under validation has its own set of flags which are:
             <ul class="list-circle">
                 <li>dirty: indicates that the field has been touched.</li>
+                <li>clean: indicates that the field has not been touched.</li>
                 <li>valid: indicates that the field is valid.</li>
-                <li>validated: indicates that the field has been validated at least once.</li>
+                <li>passed: indicates that the field has been validated at least once and that it passed the validation.</li>
+                <li>failed: indicates that the field has been validated at least once and that it failed the validation.</li>
             </ul>
+            They are accessed via methods like this:
+            <code-block class="language-javascript">
+                this.fields.dirty('name'); // Is the 'name' field dirty?
+                this.fields.dirty(); // Is at least one field dirty?
+
+                this.fields.clean('name'); // Is the 'name' field clean?
+                this.fields.clean(); // Are all fields clean?
+
+                this.fields.valid('name'); // Is the 'name' field valid?
+                this.fields.valid(); // Are all fields valid?
+
+                this.fields.passed('name'); // Has the 'name' field passed?
+                this.fields.passed(); // Have all fields passed the validation?
+
+                this.fields.failed('name'); // Has the 'name' field failed?
+                this.fields.failed(); // Has at least one field failed the validation?
+            </code-block>
             Here is an example that uses those flags, the button is disabled unless one of the fields is dirty.
          </p>
          <flags-example></flags-example>
