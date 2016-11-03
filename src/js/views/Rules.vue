@@ -530,6 +530,27 @@
                 As you can see a validation rule must implement one of the three forms discussed above.
                  Not doing so will throw a <code>ValidatorException</code> with a suitable error message detailing what were you missing.
             </note>
+
+            Additionally you may want to provide a reason for failing the validation that may change the error message. For example you may be using an external API and the error message is generated there.
+            <br><br>
+            To acheive this, you need to return an <code>Object</code> instead of a <code>Boolean</code> this object should always contain a <code>valid</code> property and an optional <code>data</code> property, the data property will be passed to the message generator function as the third parameter, then you should use the passed data property to modify the output message. The same thing applies to promises as you resolve the promise with an object containg those properties. here is a custom rule that does just that:
+            <code-block class="language-javascript">
+                const myRule = {
+                    getMessage(field, params, data) {
+                        return (data && data.message) || 'Something went wrong';
+                    },
+                    validate(value) {
+                        return new Promise(resolve => {
+                            resolve({
+                                valid: value === 'trigger' ? false : !! value,
+                                data: value !== 'trigger' ? undefined : {
+                                    message: 'Not this value'
+                                }
+                            });
+                        })
+                    }
+                };
+            </code-block>
         </p>
         <p>
             After creating your validator, You can add it to the list of rules using <code class="inline">extend(name, validator)</code> method in the validator instance.
