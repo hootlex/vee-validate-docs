@@ -88,6 +88,7 @@
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/id.js" target="github">Indonesian</a> by <a class="link" href="https://github.com/gunturaf" target="github">@gunturaf</a></li>
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/da.js" target="github">Danish</a> by <a class="link" href="https://github.com/wolthers" target="github">@wolthers</a></li>
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/zh_CN.js" target="github">Chinese</a> by <a class="link" href="https://github.com/zppro" target="github">@zppro</a></li>
+            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/pl.js" target="github">Chinese</a> by <a class="link" href="https://github.com/murbanowicz" target="github">@murbanowicz</a></li>
         </ul>
     </div>
 </template>
