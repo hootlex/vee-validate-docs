@@ -52,7 +52,7 @@
          </p>
          <locale-example></locale-example>
          <note>
-             <b>Note: </b> Here we are also seeing <code>data-as</code> attribute which tells the validator to use that value as the field name when generating error messages, this is a good way to display 'pretty names' for your inputs in error messages, which would make sense when displaying messages in other languages.
+             Here we are also seeing <code>data-as</code> attribute which tells the validator to use that value as the field name when generating error messages, this is a good way to display 'pretty names' for your inputs in error messages, which would make sense when displaying messages in other languages.
              <br><br>Keep in mind that those pretty names are only used when generating error messages.
          </note>
          <h2 id="scope-example" class="title is-4"><a href="#scope-example">Scopes</a></h2>
