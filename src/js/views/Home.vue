@@ -64,6 +64,9 @@
             The field name that appears in the error messages is usually the input's <code>name</code> attribute, unless you passed a value from the vue instance <code>$data</code> object,
             The name will be then the expression name, check the <router-link :to="{ name: 'examples', hash: '#validate-data-example' }">data validation example</router-link>.
         </note>
+        <note>
+            Its always a good idea to have a <code>name</code> attribute on your fields. If you are not binding the field and do not have a name attribute the validator won't properly register the field.
+        </note>
         <h2 id="render-errors" class="title is-4"><a href="#render-errors">Rendering Errors</a></h2>
         <p>
             Naturally, you would want to display the errors to your users. The plugin augments your Vue instance with a private validator object and a public errors data object.
