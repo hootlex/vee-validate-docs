@@ -1,7 +1,7 @@
 <template>
     <code-example>
         <div class="columns is-multiline" slot="example">
-            <form @submit.prevent="validateForm('form-1')" class="columns column is-multiline is-12">
+            <form @submit.prevent="validateForm('form-1')" class="columns column is-multiline is-12" data-scope="form-1">
                 <legend>Form 1</legend>
                 <div class="column is-12">
                     <label class="label">Name</label>
